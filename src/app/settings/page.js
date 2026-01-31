@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -7,7 +5,7 @@ export default function Home() {
         <div className="flex flex-col items-center sm:items-start">
           <h1 className="text-5xl font-extrabold text-black dark:text-white sm:text-6xl">
             Welcome to{" "}
-            <span className="text-blue-600">SpringPad Revived!!</span>
+            <span className="text-blue-600">Settings page</span>
           </h1>
         </div>
       </main>
