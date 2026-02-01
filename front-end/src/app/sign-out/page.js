@@ -10,7 +10,7 @@ export default function SignOutPage() {
   const handleSignOut = async () => {
     try {
       await signOut(auth);
-      router.push("/auth");
+      router.push("/");
     } catch (err) {
       console.error(err);
       alert("Error signing out. Please try again.");
