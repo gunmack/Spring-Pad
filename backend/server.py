@@ -97,8 +97,11 @@ from sqlalchemy import (
     ForeignKey,
     PrimaryKeyConstraint,
     String,
-    Text
+    Text,
+    UUID,
+    Integer
 )
+from sqlalchemy.orm import mapped_column
 
 class BedrockUser(Base):
     __tablename__ = "bedrock_user"
@@ -112,4 +115,64 @@ class BedrockUser(Base):
             "username" : self.username,
             "email" : self.email,
             "u_token" : self.u_token
+        }
+    
+class BedrockFamily(Base):
+    __tablename__ = "bedrock_family"
+
+    f_id = Column(UUID(), primary_key=True, nullable=False)
+    f_owner = Column(ForeignKey("bedrock_user.username"))
+
+    def to_dict(self) -> dict:
+        return {
+            "f_id" : self.f_id,
+            "f_owner" : self.f_owner
+        }
+
+class BedrockFamilyMember(Base):
+    __tablename__ = "bedrock_family_member"
+
+    f_id = Column(ForeignKey("bedrock_family.f_id"), nullable=False, primary_key=True)
+    username = Column(ForeignKey("bedrock_user.username"), nullable=False)
+
+    def to_dict(self) -> dict:
+        return {
+            "f_id" : self.f_id,
+            "username" : self.username
+        }
+    
+class BedrockNote(Base):
+    __tablename__ = "bedrock_note"
+
+    n_id = Column(Integer, primary_key=True)
+
+    def to_dict(self) -> dict:
+        return {
+            "n_id" : self.n_id
+        }
+    
+class BedrockUserNote(BedrockNote):
+    n_type = mapped_column(String(50), default='USER', use_existing_column=True)
+    n_owner = mapped_column(ForeignKey("bedrock_user.username"), use_existing_column=True)
+    n_data = mapped_column(String(65535), use_existing_column=True)
+
+    def to_dict(self) -> dict:
+        return {
+            "n_id" : BedrockNote.n_id,
+            "n_type" : self.n_type,
+            "n_owner" : self.n_owner,
+            "n_data" : self.n_data
+        }
+    
+class BedrockFamilyNote(BedrockNote):
+    n_type = mapped_column(String(50), default='FAMILY', use_existing_column=True)
+    n_owner = mapped_column(ForeignKey("bedrock_family.f_id"), use_existing_column=True)
+    n_data = mapped_column(String(65535), use_existing_column=True)
+
+    def to_dict(self) -> dict:
+        return {
+            "n_id" : BedrockNote.n_id,
+            "n_type" : self.n_type,
+            "n_owner" : self.n_owner,
+            "n_data" : self.n_data
         }
