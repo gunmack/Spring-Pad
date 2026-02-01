@@ -6,10 +6,10 @@ import { useAuth } from "../context/AuthContext"; // adjust path
 import DropdownMenu from "@/components/dropdown";
 export default function Settings() {
   const router = useRouter();
-  const { user } = useAuth(); // use context instead of local state
+  const { user, loading } = useAuth(); // use context instead of local state
   useEffect(() => {
-    if (!user) router.push("/auth");
-  }, [user, router]);
+    if (!loading && !user) router.push("/auth");
+  }, [loading, user, router]);
   return (
     <div>
       <DropdownMenu />
@@ -17,7 +17,7 @@ export default function Settings() {
         <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-5xl font-extrabold text-black dark:text-white sm:text-6xl">
-              Welcome to <span className="text-blue-600">Settings page</span>
+              <span className="text-blue-600">Settings</span>
             </h1>
           </div>
         </main>
