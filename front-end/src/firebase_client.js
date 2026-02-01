@@ -1,22 +1,25 @@
 // firebase_client.js
-"use client"; // mark it as client-only
-
-import { initializeApp } from "firebase/app";
+"use client"; // important
+import { initializeApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MSG_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-};
+let auth;
 
-// Initialize app only once
-const app =
-  typeof window !== "undefined" ? initializeApp(firebaseConfig) : null;
-const auth = typeof window !== "undefined" ? getAuth(app) : null;
+if (typeof window !== "undefined") {
+  if (!getApps().length) {
+    const app = initializeApp({
+      apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+      authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+      storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MSG_SENDER_ID,
+      appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+      measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+    });
+    auth = getAuth(app);
+  } else {
+    auth = getAuth(getApps()[0]);
+  }
+}
 
-export { auth, app };
+export { auth };
