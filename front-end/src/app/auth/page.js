@@ -8,7 +8,7 @@ import {
   signInAnonymously,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { getFirebaseAuth } from "../../firebase_client"; // client-only Firebase
+import { auth } from "../../firebase_client"; // client-only Firebase
 import { useRouter } from "next/navigation";
 
 export default function AuthPage() {
@@ -21,7 +21,6 @@ export default function AuthPage() {
   const [popupOpen, setPopupOpen] = useState(false);
 
   useEffect(() => {
-    const auth = getFirebaseAuth();
     if (!auth) return; // skip SSR
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -37,7 +36,6 @@ export default function AuthPage() {
   }, [router]);
 
   const handleGoogleSignIn = async () => {
-    const auth = getFirebaseAuth();
     if (!auth) return;
 
     setPopupOpen(true);
@@ -57,7 +55,7 @@ export default function AuthPage() {
       setMsg("Enter both email and password.");
       return;
     }
-    const auth = getFirebaseAuth();
+
     if (!auth) return;
 
     try {
@@ -77,7 +75,6 @@ export default function AuthPage() {
   };
 
   const handleGuestLogin = async () => {
-    const auth = getFirebaseAuth();
     if (!auth) return;
 
     try {

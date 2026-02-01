@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { getFirebaseAuth } from "../../firebase_config";
+import { auth } from "@/firebase_client";
 import DropdownMenu from "@/components/dropdown";
 
 export default function Feed() {
@@ -12,7 +12,6 @@ export default function Feed() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const auth = getFirebaseAuth(); // just a local variable
     if (!auth) return; // skip SSR
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

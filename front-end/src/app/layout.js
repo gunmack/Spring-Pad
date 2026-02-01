@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import DropdownMenu from "@/components/dropdown";
 import { AuthProvider } from "./context/AuthContext";
 
 const geistSans = Geist({

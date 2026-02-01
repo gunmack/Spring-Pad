@@ -5,7 +5,7 @@
 "use client";
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { getFirebaseAuth } from "../../firebase_config";
+import { auth } from "@/firebase_client";
 
 // import { addUserData } from "../app_firebase";
 
@@ -39,7 +39,7 @@ export default function SignUpBox() {
       try {
         // Ensure you await the Firebase sign-up function
         const result = await createUserWithEmailAndPassword(
-          getFirebaseAuth(),
+          auth,
           formData.email,
           formData.password,
         );

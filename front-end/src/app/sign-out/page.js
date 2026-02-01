@@ -1,11 +1,11 @@
-"use client";
+"use client"; // must be at top
+
 import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
-import { getFirebaseAuth } from "../../firebase_config";
+import { auth } from "@/firebase_client";
 
 export default function SignOutPage() {
   const router = useRouter();
-  const auth = getFirebaseAuth();
 
   const handleSignOut = async () => {
     try {
@@ -13,6 +13,7 @@ export default function SignOutPage() {
       router.push("/auth");
     } catch (err) {
       console.error(err);
+      alert("Error signing out. Please try again.");
     }
   };
 
