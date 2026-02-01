@@ -1,38 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { auth } from "@/firebase_client";
+import { useAuth } from "../context/AuthContext"; // adjust path
 import DropdownMenu from "@/components/dropdown";
 
 export default function Feed() {
   const router = useRouter();
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { user } = useAuth(); // use context instead of local state
 
+  // redirect to auth page if not logged in
   useEffect(() => {
-    if (!auth) return; // skip SSR
-
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) {
-        router.push("/auth");
-      } else {
-        setUser(currentUser);
-      }
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, [router]);
-
-  if (loading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <p className="text-gray-500">Loading feed...</p>
-      </div>
-    );
-  }
+    if (!user) router.push("/auth");
+  }, [user, router]);
 
   return (
     <div>

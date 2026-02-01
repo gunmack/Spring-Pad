@@ -130,7 +130,7 @@ export default function AuthPage() {
         {/* Google sign-in */}
         <button
           onClick={handleGoogleSignIn}
-          className="cursor-pointer w-full bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg mb-4 flex justify-center items-center hover:pointer"
+          className="cursor-pointer w-full bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg mb-4 flex justify-center items-center "
         >
           {popupOpen ? "Opening Google popup..." : "Sign in with Google"}
         </button>
