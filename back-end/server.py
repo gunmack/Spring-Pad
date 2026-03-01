@@ -4,7 +4,11 @@ from contextlib import asynccontextmanager
 import database
 
 logging.basicConfig(level=logging.DEBUG)
-database.setup()
+
+###
+## GPT suggests removal of line below
+## database.setup()
+###
 
 app = FastAPI(
     lifespan=database.lifespan,

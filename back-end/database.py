@@ -27,8 +27,15 @@ class DatabaseSessionManager:
     def __init__(self, db_url: str, engine_kwargs: dict[str, Any], check_db=True):
         self._engine = sqlalchemy.ext.asyncio.create_async_engine(db_url, **engine_kwargs)
         self._sessionmaker = sqlalchemy.ext.asyncio.async_sessionmaker(autocommit=False, bind=self._engine)
-        if check_db:
-            asyncio.run(DatabaseSessionManager.test_connection(db_url))
+        ###
+        # Can't call asyncio.run() because 
+        # Render/Uvicorn already runs inside an asyncio event loop
+        # if check_db:
+        #     asyncio.run(DatabaseSessionManager.test_connection(db_url))
+        ###
+        
+        
+
 
     @staticmethod
     async def test_connection(url: str):
@@ -49,6 +56,18 @@ class DatabaseSessionManager:
 
         self._engine = None
         self._sessionmaker = None
+
+    ###
+    ## Addition suggested by GPT
+
+    # @async def lifespan(self, app:FastAPI):
+    #     # Async setup code here
+    #     dbsessionmanager = DatabaseSessionManager(DATABASE_URL, {"echo": True})
+    #     await dbsessionmanager.test_connection(DATABASE_URL)  # await, not asyncio.run
+    #     yield dbsessionmanager
+    #     await dbsessionmanager.close()
+    
+    ###
 
     @contextlib.asynccontextmanager
     async def connect(self) -> AsyncIterator[AsyncConnection]:
