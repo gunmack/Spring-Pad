@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function AddModal({ open, onClose, onSubmit }) {
   const [autoCategorize, setAutoCategorize] = useState(false);
-  const [visibility, setVisibility] = useState("");
+  const [visibility, setVisibility] = useState(false);
 
   if (!open) return null;
 
@@ -16,7 +16,15 @@ export default function AddModal({ open, onClose, onSubmit }) {
             e.preventDefault();
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
-            onSubmit(data);
+            onSubmit({
+              title: data.title,
+              description: data.description,
+              date: data.date,
+              autoCategorize,
+              visibility,
+            });
+            setAutoCategorize(false);
+            setVisibility(false);
           }}
         >
           <div className="mb-4">
@@ -48,6 +56,7 @@ export default function AddModal({ open, onClose, onSubmit }) {
               id="date"
               name="date"
               className="ml-2 px-3 py-2 border text-black rounded-lg"
+              required
             />
           </div>
           <div className="mt-4 justify-between flex">
@@ -62,16 +71,14 @@ export default function AddModal({ open, onClose, onSubmit }) {
               <label htmlFor="autoCategorize" className="ml-2 text-black ">
                 Auto categorize
               </label>
-              {/* <p>Value: {autoCategorize ? "true" : "false"}</p> */}
+              {/* <p>Value: {autoCategorize}</p> */}
             </div>
             <div>
               <input
                 type="checkbox"
                 id="visibility"
-                checked={visibility === "private"}
-                onChange={(e) =>
-                  setVisibility(e.target.checked ? "private" : "public")
-                }
+                checked={visibility}
+                onChange={(e) => setVisibility(e.target.checked)}
                 className="ml-2 px-3 py-2 border text-black rounded-lg"
               />
               <label htmlFor="visibilityPrivate" className="ml-2 text-black ">
@@ -84,7 +91,11 @@ export default function AddModal({ open, onClose, onSubmit }) {
             <button
               type="button"
               className="mr-4 px-4 py-2 bg-red-400 rounded-lg cursor-pointer hover:bg-red-600 text-white"
-              onClick={onClose}
+              onClick={() => {
+                onClose();
+                setAutoCategorize(false);
+                setVisibility(false);
+              }}
             >
               Cancel
             </button>

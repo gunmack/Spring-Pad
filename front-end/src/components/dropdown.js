@@ -79,8 +79,10 @@ export default function DropdownMenu() {
                 <a
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-6 py-3 hover:bg-gray-100 ${
-                    isActive ? "bg-blue-600 text-white" : "text-black"
+                  className={`block px-6 py-3 ${
+                    isActive
+                      ? "bg-blue-600 text-white font-bold "
+                      : "text-black  hover:bg-gray-100"
                   }`}
                 >
                   {item.label}
