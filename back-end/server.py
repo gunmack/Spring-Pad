@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 ###
 ## GPT suggests removal of line below
-## database.setup()
+database.setup()
 ###
 
 app = FastAPI(
