@@ -1,6 +1,10 @@
 "use client";
+import { useState } from "react";
 
 export default function AddModal({ open, onClose, onSubmit }) {
+  const [autoCategorize, setAutoCategorize] = useState(false);
+  const [visibility, setVisibility] = useState("");
+
   if (!open) return null;
 
   return (
@@ -49,27 +53,31 @@ export default function AddModal({ open, onClose, onSubmit }) {
           <div className="mt-4 justify-between flex">
             <div>
               <input
-                type="radio"
-                id="autoCatergorize"
-                name="autoCatergorize"
-                value="true"
+                type="checkbox"
+                id="autoCategorize"
+                checked={autoCategorize}
+                onChange={(e) => setAutoCategorize(e.target.checked)}
                 className="ml-2 px-3 py-2 border text-black rounded-lg"
               />
-              <label htmlFor="autoCatergorize" className="ml-2 text-black ">
-                Auto catergorize
+              <label htmlFor="autoCategorize" className="ml-2 text-black ">
+                Auto categorize
               </label>
+              {/* <p>Value: {autoCategorize ? "true" : "false"}</p> */}
             </div>
             <div>
               <input
-                type="radio"
+                type="checkbox"
                 id="visibility"
-                name="visibility"
-                value="private"
+                checked={visibility === "private"}
+                onChange={(e) =>
+                  setVisibility(e.target.checked ? "private" : "public")
+                }
                 className="ml-2 px-3 py-2 border text-black rounded-lg"
               />
               <label htmlFor="visibilityPrivate" className="ml-2 text-black ">
                 Private
               </label>
+              {/* <p>Visibility: {visibility}</p> */}
             </div>
           </div>
           <div className="flex justify-end mt-4">
