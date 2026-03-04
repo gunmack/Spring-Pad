@@ -11,16 +11,18 @@ export default function ProtectedLayout({ children }) {
 
   useEffect(() => {
     if (!loading && !user) {
-      router.replace("/auth");
+      router.push("/auth");
     }
   }, [user, loading, router]);
 
   if (loading) return null;
 
   return (
-    <>
+    <div className="min-h-screen min-w-screen">
       <DropdownMenu />
-      {children}
-    </>
+      <div>
+        {children}
+      </div>
+    </div>
   );
 }

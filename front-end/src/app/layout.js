@@ -22,10 +22,13 @@ export default function RootLayout({ children }) {
     <AuthProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} 
+          antialiased `}
         >
-          <div className="wrap min-h-screen ">
-            <main>{children}</main>
+          <div className="bg-gray-800 text-white flex items-center justify-center min-h-screen wrap ">
+            <main className="bg-gray-900 text-left rounded-lg">
+              {children}
+            </main>
           </div>
         </body>
       </html>

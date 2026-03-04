@@ -34,7 +34,8 @@ export default function DropdownMenu() {
       const auth = getFirebaseAuth();
       await signOut(auth);
       setTimeout(() => {
-      router.push("/goodbye!");}, 50); // Redirect to login
+        router.push("/goodbye!");
+      }, 50); // Redirect to login
     } catch (error) {
       console.error("Error logging out:", error);
       alert("An error occurred while logging out. Please try again.");
@@ -45,11 +46,11 @@ export default function DropdownMenu() {
   const logoutItem = items.find((i) => i.action === "logout");
 
   return (
-    <div className="sticky top-0 z-50 flex justify-start bg-black">
+    <div className="sticky top-0 z-50 flex justify-start ">
       {/* Hamburger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="cursor-pointer flex flex-col justify-between w-8 h-8 p-1 m-4 z-50 relative"
+        className="cursor-pointer flex flex-col justify-between w-8 h-8 p-1 m-4 z-50 relative hover:bg-gray-500 rounded-sm"
       >
         <span className="block h-1 bg-white" />
         <span className="block h-1 bg-white" />
@@ -59,7 +60,7 @@ export default function DropdownMenu() {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-white/20 backdrop-blur-md z-40"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
@@ -82,7 +83,7 @@ export default function DropdownMenu() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-6 py-3 ${
                     isActive
-                      ? "bg-blue-600 text-white font-bold "
+                      ? "bg-blue-400 text-white font-bold "
                       : "text-black  hover:bg-gray-100"
                   }`}
                 >
@@ -98,7 +99,7 @@ export default function DropdownMenu() {
           <div className="mt-auto border-t border-gray-200">
             <button
               onClick={handleSignOut}
-              className="cursor-pointer w-full text-left px-6 py-3 text-black hover:bg-red-500 hover:text-white"
+              className="cursor-pointer w-full text-left px-6 py-3 text-black hover:bg-red-400 hover:text-white"
             >
               {logoutItem.label}
             </button>

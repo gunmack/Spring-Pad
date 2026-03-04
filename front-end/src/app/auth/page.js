@@ -95,16 +95,13 @@ export default function AuthPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-8 sm:p-20 bg-zinc-50 dark:bg-black">
-      <div className="bg-white w-full max-w-md shadow-md rounded-lg p-8 dark:bg-gray-900">
-        <h1 className="text-2xl font-bold text-center mb-6 text-black dark:text-white">
-          Sign In
-        </h1>
+    <div className=" w-full max-w-md shadow-md rounded-lg p-8">
+      <h1 className="text-2xl font-bold text-center mb-6 ">Sign In</h1>
 
-        {msg && <p className="mb-4 text-red-500 text-center">{msg}</p>}
+      {msg && <p className="mb-4 text-red-500 text-center">{msg}</p>}
 
-        {/* Email/password login */}
-        {/* <div className="flex flex-col gap-4 mb-4">
+      {/* Email/password login */}
+      {/* <div className="flex flex-col gap-4 mb-4">
           <input
             type="email"
             placeholder="Email"
@@ -127,22 +124,21 @@ export default function AuthPage() {
           </button>
         </div> */}
 
-        {/* Google sign-in */}
-        <button
-          onClick={handleGoogleSignIn}
-          className="cursor-pointer w-full bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg mb-4 flex justify-center items-center "
-        >
-          {popupOpen ? "Opening Google popup..." : "Sign in with Google"}
-        </button>
+      {/* Google sign-in */}
+      <button
+        onClick={handleGoogleSignIn}
+        className="cursor-pointer w-full bg-green-500 hover:bg-green-600  p-4 rounded-lg mb-4 flex justify-center items-center "
+      >
+        {popupOpen ? "Opening Google popup..." : "Authenticate with Google"}
+      </button>
 
-        {/* Guest login */}
-        {/* <button
+      {/* Guest login */}
+      {/* <button
           onClick={handleGuestLogin}
           className="w-full border border-gray-500 hover:bg-gray-100 p-2 rounded-lg text-black dark:text-white"
         >
           Continue as Guest
         </button> */}
-      </div>
     </div>
   );
 }
