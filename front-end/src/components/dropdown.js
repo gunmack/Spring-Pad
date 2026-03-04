@@ -33,7 +33,8 @@ export default function DropdownMenu() {
     try {
       const auth = getFirebaseAuth();
       await signOut(auth);
-      router.push("/"); // Redirect to login
+      setTimeout(() => {
+      router.push("/goodbye!");}, 50); // Redirect to login
     } catch (error) {
       console.error("Error logging out:", error);
       alert("An error occurred while logging out. Please try again.");

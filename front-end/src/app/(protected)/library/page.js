@@ -1,17 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { useAuth } from "../context/AuthContext"; // adjust path
-import DropdownMenu from "@/components/dropdown";
+import { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 import AddModal from "@/components/addModal";
 export default function Library() {
-  const router = useRouter();
-  const { user, loading } = useAuth(); // use context instead of local state
+  const { user } = useAuth();
   const [openModal, setOpenModal] = useState(false);
-  // redirect to auth page if not logged in
-  useEffect(() => {
-    if (!loading && !user) router.push("/auth");
-  }, [loading, user, router]);
   const handleAdd = async (data) => {
     try {
       const response = await fetch("/api/notes", {
@@ -37,7 +30,6 @@ export default function Library() {
   };
   return (
     <div>
-      <DropdownMenu />
       <button
         className="fixed top-4 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-700text-white rounded-full flex items-center justify-center text-3xl shadow-lg z-50 cursor-pointer"
         onClick={() => setOpenModal(true)}
@@ -59,7 +51,7 @@ export default function Library() {
             </h1>
             {user && (
               <p className="mt-4 text-gray-700 dark:text-gray-300">
-                Logged in as: {user.displayName || user.email || "Guest"}
+                Logged in as: {user.displayName || user.email}
               </p>
             )}
           </div>

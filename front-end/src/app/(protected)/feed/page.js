@@ -1,19 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { useAuth } from "../context/AuthContext"; // adjust path
-import DropdownMenu from "@/components/dropdown";
+import { useState } from "react";
 
 export default function Feed() {
-  const router = useRouter();
-  const { user, loading } = useAuth(); // use context instead of local state
-
-  // redirect to auth page if not logged in
-  useEffect(() => {
-    if (!loading && !user) router.push("/auth");
-  }, [loading, user, router]);
-
   const [selectedOption, setSelectedOption] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -21,8 +10,6 @@ export default function Feed() {
 
   return (
     <div className="relative bg-black min-h-screen">
-      <DropdownMenu />
-
       <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
         <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center py-32 px-16 bg-white dark:bg-black">
           <div className="flex flex-col items-center">
