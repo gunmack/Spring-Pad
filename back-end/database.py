@@ -57,18 +57,6 @@ class DatabaseSessionManager:
         self._engine = None
         self._sessionmaker = None
 
-    ###
-    ## Addition suggested by GPT
-
-    # @async def lifespan(self, app:FastAPI):
-    #     # Async setup code here
-    #     dbsessionmanager = DatabaseSessionManager(DATABASE_URL, {"echo": True})
-    #     await dbsessionmanager.test_connection(DATABASE_URL)  # await, not asyncio.run
-    #     yield dbsessionmanager
-    #     await dbsessionmanager.close()
-    
-    ###
-
     @contextlib.asynccontextmanager
     async def connect(self) -> AsyncIterator[AsyncConnection]:
         if self._engine is None:

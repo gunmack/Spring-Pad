@@ -4,10 +4,6 @@ from contextlib import asynccontextmanager
 import database
 
 logging.basicConfig(level=logging.DEBUG)
-
-##
-# GPT suggests removal of line below
-# But not required for successful deployment
 database.setup()
 
 
