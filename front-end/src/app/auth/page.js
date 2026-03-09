@@ -39,15 +39,21 @@ export default function AuthPage() {
     if (!auth) return;
 
     setPopupOpen(true);
+    // setLoading(true);
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
+      setLoading(true); // Show loading while redirecting
       router.push("/feed");
+      setPopupOpen(false);
+      setLoading(true);
     } catch (err) {
       console.error("Google sign-in error:", err);
-      setMsg("Error signing in with Google. Try again.");
+      setMsg("Please try again.");
+    } finally {
+      setPopupOpen(false);
+      setLoading(false);
     }
-    setPopupOpen(false);
   };
 
   const handleEmailLogin = async () => {
@@ -88,8 +94,9 @@ export default function AuthPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        <p className="text-gray-500">Checking authentication...</p>
+      <div className="flex items-center gap-2 ">
+        <div className="h-5 w-5 border-2 border-white  border-t-transparent rounded-full animate-spin"></div>
+        <div>Checking authentication...</div>
       </div>
     );
   }
@@ -125,12 +132,27 @@ export default function AuthPage() {
         </div> */}
 
       {/* Google sign-in */}
-      <button
-        onClick={handleGoogleSignIn}
-        className="cursor-pointer w-full bg-green-500 hover:bg-green-600  p-4 rounded-lg mb-4 flex justify-center items-center "
-      >
-        {popupOpen ? "Opening Google popup..." : "Authenticate with Google"}
-      </button>
+      <div>
+        <button
+          onClick={handleGoogleSignIn}
+          disabled={popupOpen}
+          className={`w-full p-4 rounded-lg mb-4 flex justify-center items-center 
+          ${
+            popupOpen
+              ? "bg-green-300 cursor-not-allowed"
+              : "bg-green-500 hover:bg-green-600 cursor-pointer"
+          }
+          `}
+        >
+          {popupOpen && (
+            <div className="flex items-center gap-2">
+              <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              <div>Authenticating...</div>
+            </div>
+          )}
+          {!popupOpen && <div>Authenticate with Google</div>}
+        </button>
+      </div>
 
       {/* Guest login */}
       {/* <button

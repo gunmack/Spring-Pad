@@ -26,9 +26,7 @@ export default function RootLayout({ children }) {
           antialiased `}
         >
           <div className="bg-gray-800 text-white flex items-center justify-center min-h-screen wrap ">
-            <main className="bg-gray-900 text-left rounded-lg">
-              {children}
-            </main>
+            <main className="bg-gray-900 text-left rounded-lg">{children}</main>
           </div>
         </body>
       </html>
