@@ -4,7 +4,7 @@ export default function Profile() {
   const { user } = useAuth();
   return (
     <div>
-      <main className="flex w-full flex-col items-center justify-center py-32 px-16">
+      <main className="flex w-full flex-col items-center justify-center py-16">
         <div className="flex flex-col items-center">
           <h1 className="text-5xl font-extrabold sm:text-6xl text-center">
             <span className="text-blue-300">Profile</span>

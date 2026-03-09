@@ -79,30 +79,32 @@ export default function Feed() {
   const [view, setView] = useState("month");
 
   return (
-    <main className="flex w-full flex-col items-center justify-center py-16">
-      <div className=" text-black bg-gray-400 rounded-lg p-2 w-full md:w-2/3 text-xs lg:text-lg">
-        <Calendar
-          localizer={mLocalizer}
-          events={events}
-          views={["month", "week", "day"]}
-          view={view}
-          date={date}
-          onNavigate={setDate}
-          onView={setView}
-          step={60}
-          showMultiDayTimes
-          style={{ height: 500 }}
-          formats={{
-            eventTimeRangeFormat: () => "",
-          }}
-          components={{
-            timeSlotWrapper: ColoredDateCellWrapper,
-            month: { event: MonthEvents },
-            week: { event: WeekEvents },
-            day: { event: DayEvents },
-          }} // plain object
-        />
-      </div>
-    </main>
+    <div className="flex flex-col justify-center items-center">
+      <main className="flex w-full flex-col items-center justify-center py-16">
+        <div className="text-black bg-gray-400 rounded-lg p-2 w-full md:w-2/3 text-xs lg:text-lg h-[75vh]">
+          <Calendar
+            localizer={mLocalizer}
+            events={events}
+            views={["month", "week", "day"]}
+            view={view}
+            date={date}
+            onNavigate={setDate}
+            onView={setView}
+            step={60}
+            showMultiDayTimes
+            style={{ height: "100%" }}
+            formats={{
+              eventTimeRangeFormat: () => "",
+            }}
+            components={{
+              timeSlotWrapper: ColoredDateCellWrapper,
+              month: { event: MonthEvents },
+              week: { event: WeekEvents },
+              day: { event: DayEvents },
+            }} // plain object
+          />
+        </div>
+      </main>
+    </div>
   );
 }
