@@ -35,7 +35,7 @@ export default function DropdownMenu() {
       await signOut(auth);
       setTimeout(() => {
         router.push("/goodbye!");
-      }, 50); // Redirect to login
+      }, 1); // Redirect to login
     } catch (error) {
       console.error("Error logging out:", error);
       alert("An error occurred while logging out. Please try again.");

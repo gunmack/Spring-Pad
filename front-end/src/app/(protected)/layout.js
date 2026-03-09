@@ -20,9 +20,7 @@ export default function ProtectedLayout({ children }) {
   return (
     <div className="min-h-screen min-w-screen">
       <DropdownMenu />
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 }
