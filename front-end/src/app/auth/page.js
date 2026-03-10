@@ -43,10 +43,39 @@ export default function AuthPage() {
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
+
+      const currentUser = auth.currentUser;
+      if (!currentUser) {
+        throw new Error("Error authenticating with Google. No user found.");
+      }
+      try {
+        const res = await fetch(`/api/user/${currentUser.uid}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: currentUser.displayName,
+            email: currentUser.email,
+            uid: currentUser.uid,
+          }),
+        });
+        console.log("User API response status:", res.status);
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.error);
+        }
+      } catch (err) {
+        console.error("Error authenticating with Google", err);
+        setMsg("Error authenticating with Google. Please try again.");
+      }
+    
+
       setLoading(true); // Show loading while redirecting
       router.push("/calendar");
+
       setPopupOpen(false);
-      setLoading(true);
+      
     } catch (err) {
       console.error("Google sign-in error:", err);
       setMsg("Please try again.");

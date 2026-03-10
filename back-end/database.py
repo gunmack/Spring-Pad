@@ -3,7 +3,7 @@ import contextlib
 import os
 import sqlalchemy
 import asyncpg
-from sqlalchemy import MetaData
+from sqlalchemy import MetaData, text
 from typing import Annotated, Any
 from fastapi import FastAPI, Depends
 from collections.abc import AsyncIterator
@@ -11,6 +11,17 @@ from sqlalchemy.ext.asyncio import (
     AsyncConnection,
     AsyncSession
 )
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Fetch database credentials from environment variables
+USER = os.getenv("user")
+PASSWORD = os.getenv("password")
+HOST = os.getenv("host")
+PORT = os.getenv("port")
+DBNAME = os.getenv("dbname")
 
 convention = {
     "ix": "ix_%(column_0_label)s", # index
@@ -27,17 +38,24 @@ class DatabaseSessionManager:
     def __init__(self, db_url: str, engine_kwargs: dict[str, Any], check_db=True):
         self._engine = sqlalchemy.ext.asyncio.create_async_engine(db_url, **engine_kwargs)
         self._sessionmaker = sqlalchemy.ext.asyncio.async_sessionmaker(autocommit=False, bind=self._engine)
-        if check_db:
-            asyncio.run(DatabaseSessionManager.test_connection(db_url))
+        ###
+        # Can't call asyncio.run() because 
+        # Render/Uvicorn already runs inside an asyncio event loop
+        # if check_db:
+        #     asyncio.run(DatabaseSessionManager.test_connection(db_url))
+        ###
+        
+        
+
 
     @staticmethod
     async def test_connection(url: str):
         try:
             url = url.replace("+asyncpg", "")
             print(url.replace("+asyncpg", ""))
-            conn = await asyncpg.connect(host='bedrock-db1.chacwaksqw4h.us-east-2.rds.amazonaws.com', user="bedrock",
-                                         database="postgres",
-                                         password="")
+            conn = await asyncpg.connect(host=HOST, user=USER,
+                                         database=DBNAME, port=PORT,
+                                         password=PASSWORD, ssl="require")  
             await conn.close()
         except Exception as e:
             raise Exception("fuck my baka chungus life")
@@ -78,7 +96,8 @@ class DatabaseSessionManager:
 
 def setup():
     global dbsessionmanager
-    dbsessionmanager = DatabaseSessionManager("postgresql+asyncpg://bedrock:<password>@bedrock-db1.chacwaksqw4h.us-east-2.rds.amazonaws.com:5432/postgres",
+    DATABASE_URL = f"postgresql+asyncpg://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}"
+    dbsessionmanager = DatabaseSessionManager(DATABASE_URL,
                                               {"echo":True})
 
 @contextlib.asynccontextmanager
