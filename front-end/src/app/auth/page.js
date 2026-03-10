@@ -25,7 +25,7 @@ export default function AuthPage() {
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        router.push("/feed");
+        router.push("/calendar");
       } else {
         setLoading(false);
       }
@@ -43,6 +43,7 @@ export default function AuthPage() {
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
+
       const currentUser = auth.currentUser;
       if (!currentUser) {
         throw new Error("Error authenticating with Google. No user found.");
@@ -68,9 +69,13 @@ export default function AuthPage() {
         console.error("Error authenticating with Google", err);
         setMsg("Error authenticating with Google. Please try again.");
       }
-      router.push("/feed");
+    
+
+      setLoading(true); // Show loading while redirecting
+      router.push("/calendar");
+
       setPopupOpen(false);
-      setLoading(true);
+      
     } catch (err) {
       console.error("Google sign-in error:", err);
       setMsg("Please try again.");
