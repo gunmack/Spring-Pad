@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Springpad Revived",
+  title: "Spring-Pad Revived",
   description: "Created with Next.js 13 and Tailwind CSS",
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} 
           antialiased `}
         >
-          <div className="bg-gray-800 text-white flex items-center justify-center min-h-screen wrap ">
+          <div className="bg-gray-800 text-white flex items-center justify-center min-h-screen min-w-screen wrap ">
             <main className="bg-gray-900 text-left rounded-lg">{children}</main>
           </div>
         </body>

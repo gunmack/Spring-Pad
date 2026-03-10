@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
-import { useAuth } from "../../context/AuthContext";
 import AddModal from "@/components/addModal";
-export default function Library() {
-  const { user } = useAuth();
+
+export default function Calendar() {
   const [openModal, setOpenModal] = useState(false);
   const handleAdd = async (data) => {
     try {
@@ -44,17 +43,10 @@ export default function Library() {
         onSubmit={handleAdd}
       />
 
-      <main className="flex  w-full flex-col items-center justify-center py-16 ">
-        <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
-            <span className="text-blue-300">Library/New</span>
-          </h1>
-          {user && (
-            <p className="mt-4 text-gray-700 dark:text-gray-300">
-              Logged in as: {user.displayName || user.email}
-            </p>
-          )}
-        </div>
+      <main className="flex  flex-col items-center justify-center  ">
+        <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
+          <span className="text-blue-300">Calendar</span>
+        </h1>
       </main>
     </div>
   );
