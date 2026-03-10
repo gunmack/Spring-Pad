@@ -25,7 +25,7 @@ export default function AuthPage() {
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        router.push("/feed");
+        router.push("/calendar");
       } else {
         setLoading(false);
       }
@@ -44,7 +44,7 @@ export default function AuthPage() {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
       setLoading(true); // Show loading while redirecting
-      router.push("/feed");
+      router.push("/calendar");
       setPopupOpen(false);
       setLoading(true);
     } catch (err) {

@@ -5,10 +5,51 @@ import { signOut } from "firebase/auth";
 import { getFirebaseAuth } from "../firebase_config";
 import { useRouter, usePathname } from "next/navigation";
 
+function MenuItem({ item, pathname, setIsOpen }) {
+  const isActive = item.href && pathname === item.href;
+
+  return (
+    <li>
+      <a
+        href={item.href}
+        onClick={() => setIsOpen(false)}
+        className={`block px-6 py-3 rounded-lg transition-all ${
+          isActive
+            ? "bg-blue-500 text-white font-semibold border-l-4 border-blue-700"
+            : "text-black hover:bg-gray-200"
+        }`}
+      >
+        {item.label}
+      </a>
+    </li>
+  );
+}
+
+function MenuGroup({ title, items, pathname, setIsOpen }) {
+  return (
+    <div>
+      <div className="px-4 text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">
+        {title}
+      </div>
+
+      <ul className="flex flex-col gap-1">
+        {items.map((item) => (
+          <MenuItem
+            key={item.label}
+            item={item}
+            pathname={pathname}
+            setIsOpen={setIsOpen}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function DropdownMenu() {
   const items = [
-    { label: "Feed", href: "/feed" },
-    { label: "Library", href: "/library" },
+    { label: "Calendar", href: "/calendar" },
+    { label: "Notes", href: "/notes" },
     { label: "Profile", href: "/profile" },
     { label: "Settings", href: "/settings" },
     { label: "Sign Out", action: "logout" },
@@ -42,8 +83,15 @@ export default function DropdownMenu() {
     }
   };
 
-  const normalItems = items.filter((i) => i.action !== "logout");
-  const logoutItem = items.find((i) => i.action === "logout");
+  const mainItems = (items ?? []).filter((i) =>
+    ["/calendar", "/notes"].includes(i.href),
+  );
+
+  const profileNsettings = (items ?? []).filter((i) =>
+    ["/profile", "/settings"].includes(i.href),
+  );
+
+  const logoutItem = (items ?? []).find((i) => i.action === "logout");
 
   return (
     <div className="sticky top-0 z-50 flex justify-start ">
@@ -66,40 +114,41 @@ export default function DropdownMenu() {
       )}
 
       {/* Full-height dropdown */}
+
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 flex flex-col ${
+        className={`bg-gray-300 fixed top-0 left-0 h-full w-64 shadow-lg z-50 transform transition-transform duration-300 flex flex-col ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Scrollable menu items */}
-        <ul className="flex-1 overflow-y-auto py-4 flex flex-col gap-2">
-          {normalItems.map((item, idx) => {
-            const isActive = item.href && pathname === item.href; // check active
-            return (
-              <li key={idx}>
-                <a
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-6 py-3 ${
-                    isActive
-                      ? "bg-blue-400 text-white font-bold "
-                      : "text-black  hover:bg-gray-100"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {/* Logo */}
+        <div className="flex p-4 bg-black text-white text-xl font-bold items-center justify-center">
+          Spring-Pad
+        </div>
 
-        {/* Sign Out button at bottom */}
+        {/* Scrollable section */}
+        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-6">
+          <MenuGroup
+            title="Main"
+            items={mainItems}
+            pathname={pathname}
+            setIsOpen={setIsOpen}
+          />
+
+          <MenuGroup
+            title="Account"
+            items={profileNsettings}
+            pathname={pathname}
+            setIsOpen={setIsOpen}
+          />
+        </div>
+
+        {/* Logout */}
         {logoutItem && (
-          <div className="mt-auto border-t border-gray-200">
+          <div className="p-4  border-gray-400">
             <button
               onClick={handleSignOut}
-              className="cursor-pointer w-full text-left px-6 py-3 text-black hover:bg-red-400 hover:text-white"
+              className="cursor-pointer w-full text-left px-6 py-3 rounded-lg text-black hover:bg-red-500 hover:text-white transition"
             >
               {logoutItem.label}
             </button>
