@@ -12,6 +12,8 @@ import {
   DayEvents,
   ColoredDateCellWrapper,
 } from "./cal-struct";
+import { loadEvents } from "./load";
+import { useAuth } from "../../context/AuthContext";
 
 const mLocalizer = momentLocalizer(moment);
 
@@ -22,6 +24,7 @@ export default function EventsFeed() {
   const [openModal, setOpenModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const { user } = useAuth();
 
   const [availableViews, setAvailableViews] = useState([
     "month",
@@ -47,18 +50,14 @@ export default function EventsFeed() {
     }
   };
 
-  const loadEvents = async () => {
-    const response = await fetch("/api/events");
-    const data = await response.json();
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const data = await loadEvents(user.uid);
+      setEvents(data);
+    };
 
-    const convertedEvents = data.map((event) => ({
-      ...event,
-      start: new Date(event.start),
-      end: new Date(event.end),
-    }));
-
-    setEvents(convertedEvents);
-  };
+    fetchEvents();
+  }, [user.uid]);
 
   useEffect(() => {
     const updateViews = () => {
@@ -74,10 +73,6 @@ export default function EventsFeed() {
     window.addEventListener("resize", updateViews);
 
     return () => window.removeEventListener("resize", updateViews);
-  }, []);
-
-  useEffect(() => {
-    loadEvents();
   }, []);
 
   return (

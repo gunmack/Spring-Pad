@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import { useAuth } from "../app/context/AuthContext";
 
 export default function AddEvent({ open, onClose, onSubmit }) {
+  const { user } = useAuth();
   const [autoCategorize, setAutoCategorize] = useState(false);
   const [visibility, setVisibility] = useState(false);
   const [allDay, setAllDay] = useState(false);
@@ -18,6 +20,7 @@ export default function AddEvent({ open, onClose, onSubmit }) {
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
             const newEvent = {
+              uid: user.uid,
               title: data.title,
               description: data.description || "",
               start: new Date(

@@ -12,6 +12,8 @@ export default function Profile() {
           {user && (
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               Logged in as: {user.displayName || user.email || "Guest"}
+              <br />
+              User ID: {user.uid}
             </p>
           )}
         </div>

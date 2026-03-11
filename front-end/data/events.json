@@ -1,107 +1,314 @@
 [
   {
     "id": 1,
-    "title": "Sprint Kickoff",
-    "description": "Planning for new sprint",
-    "start": "2026-03-18T09:00:00Z",
-    "end": "2026-03-18T10:30:00Z"
+    "title": "Project Kickoff",
+    "description": "Initial team meeting",
+    "start": "2026-03-01T09:00:00",
+    "end": "2026-03-01T10:30:00",
+    "uid": ""
+  },
+  {
+    "id": 2,
+    "title": "Design Review",
+    "description": "Wireframes discussion",
+    "start": "2026-03-01T11:00:00",
+    "end": "2026-03-01T12:30:00",
+    "uid": ""
+  },
+  {
+    "id": 3,
+    "title": "Team Lunch",
+    "description": "Lunch with colleagues",
+    "start": "2026-03-01T12:30:00",
+    "end": "2026-03-01T13:30:00",
+    "uid": ""
   },
   {
     "id": 4,
-    "title": "Team Lunch",
-    "description": "Lunch at cafe",
-    "start": "2026-03-21T12:00:00Z",
-    "end": "2026-03-21T13:00:00Z"
+    "title": "Client Call",
+    "description": "Call to discuss requirements",
+    "start": "2026-03-01T14:00:00",
+    "end": "2026-03-01T14:45:00",
+    "uid": ""
   },
   {
-    "id": 10,
-    "title": "All Day Workshop",
-    "description": "",
-    "start": "2026-03-31T00:00:00Z",
-    "end": "2026-03-31T23:59:59Z"
+    "id": 5,
+    "title": "Sprint Planning",
+    "description": "Plan tasks for sprint",
+    "start": "2026-03-02T09:00:00",
+    "end": "2026-03-02T10:30:00",
+    "uid": ""
+  },
+  {
+    "id": 6,
+    "title": "Code Review",
+    "description": "Review PRs",
+    "start": "2026-03-02T11:00:00",
+    "end": "2026-03-02T12:30:00",
+    "uid": ""
+  },
+  {
+    "id": 7,
+    "title": "Marketing Sync",
+    "description": "Weekly marketing meeting",
+    "start": "2026-03-02T13:00:00",
+    "end": "2026-03-02T14:00:00",
+    "uid": ""
+  },
+  {
+    "id": 8,
+    "title": "Product Demo",
+    "description": "Demo new features",
+    "start": "2026-03-02T15:00:00",
+    "end": "2026-03-02T16:00:00",
+    "uid": ""
+  },
+  {
+    "id": 9,
+    "title": "One-on-One",
+    "description": "1:1 with manager",
+    "start": "2026-03-03T09:30:00",
+    "end": "2026-03-03T10:00:00",
+    "uid": ""
   },
   {
     "id": 11,
-    "title": "April Kickoff",
-    "description": "Start of April planning",
-    "start": "2026-04-01T09:00:00Z",
-    "end": "2026-04-01T10:00:00Z"
+    "title": "Team Retrospective",
+    "description": "Sprint review",
+    "start": "2026-03-03T13:00:00",
+    "end": "2026-03-03T14:00:00",
+    "uid": ""
   },
   {
     "id": 12,
-    "title": "Client Call",
-    "description": "Discuss project requirements",
-    "start": "2026-04-02T15:00:00Z",
-    "end": "2026-04-02T16:00:00Z"
+    "title": "Budget Meeting",
+    "description": "Quarterly budget discussion",
+    "start": "2026-03-04T09:00:00",
+    "end": "2026-03-04T10:00:00",
+    "uid": ""
   },
   {
     "id": 13,
-    "title": "Frontend Meeting",
-    "description": "Discuss Next.js features",
-    "start": "2026-04-03T11:00:00Z",
-    "end": "2026-04-03T12:00:00Z"
+    "title": "Customer Feedback",
+    "description": "Analyze survey results",
+    "start": "2026-03-04T10:30:00",
+    "end": "2026-03-04T12:00:00",
+    "uid": ""
   },
   {
     "id": 14,
-    "title": "All Hands",
-    "description": "Company meeting",
-    "start": "2026-04-05T17:00:00Z",
-    "end": "2026-04-05T18:00:00Z"
+    "title": "Tech Talk",
+    "description": "Internal knowledge sharing",
+    "start": "2026-03-04T13:00:00",
+    "end": "2026-03-04T14:00:00",
+    "uid": ""
   },
   {
     "id": 15,
-    "title": "Hackathon",
-    "description": "24 hour coding event",
-    "start": "2026-04-07T09:00:00Z",
-    "end": "2026-04-08T09:00:00Z"
+    "title": "Deployment",
+    "description": "Release latest features",
+    "start": "2026-03-04T15:00:00",
+    "end": "2026-03-04T16:30:00",
+    "uid": ""
   },
   {
     "id": 16,
-    "title": "Gym",
-    "description": "",
-    "start": "2026-04-10T07:00:00Z",
-    "end": "2026-04-10T08:00:00Z"
+    "title": "Weekly Check-in",
+    "description": "Team weekly meeting",
+    "start": "2026-03-05T09:00:00",
+    "end": "2026-03-05T09:45:00",
+    "uid": ""
   },
   {
     "id": 17,
-    "title": "Family Dinner",
-    "description": "",
-    "start": "2026-04-12T18:30:00Z",
-    "end": "2026-04-12T20:00:00Z"
+    "title": "Strategy Meeting",
+    "description": "Leadership quarterly planning",
+    "start": "2026-03-05T10:00:00",
+    "end": "2026-03-05T11:30:00",
+    "uid": ""
   },
   {
     "id": 18,
-    "title": "Release Day",
-    "description": "Deploy new build",
-    "start": "2026-04-15T09:00:00Z",
-    "end": "2026-04-15T17:00:00Z"
+    "title": "Product Brainstorm",
+    "description": "Ideation for new features",
+    "start": "2026-03-05T13:00:00",
+    "end": "2026-03-05T15:00:00",
+    "uid": ""
   },
   {
     "id": 19,
-    "title": "Product Demo",
-    "description": "Demo to stakeholders",
-    "start": "2026-04-18T14:00:00Z",
-    "end": "2026-04-18T15:30:00Z"
+    "title": "All Hands",
+    "description": "Company-wide updates",
+    "start": "2026-03-06T09:30:00",
+    "end": "2026-03-06T10:30:00",
+    "uid": ""
   },
   {
     "id": 20,
-    "title": "Vacation",
-    "description": "Taking time off",
-    "start": "2026-04-22T00:00:00Z",
-    "end": "2026-04-28T23:59:59Z"
+    "title": "Accessibility Workshop",
+    "description": "Training on inclusive design",
+    "start": "2026-03-06T11:00:00",
+    "end": "2026-03-06T12:30:00",
+    "uid": ""
   },
   {
-    "id": "78ce2132-6d29-4de9-8795-791017e490c4",
-    "title": "asdf",
-    "description": "dsafds",
+    "id": 21,
+    "title": "Marketing Review",
+    "description": "Campaign status check",
+    "start": "2026-03-06T13:00:00",
+    "end": "2026-03-06T14:00:00",
+    "uid": ""
+  },
+  {
+    "id": 22,
+    "title": "Design QA",
+    "description": "Verify UI designs",
+    "start": "2026-03-06T14:30:00",
+    "end": "2026-03-06T15:30:00",
+    "uid": ""
+  },
+  {
+    "id": 24,
+    "title": "Tech Sync",
+    "description": "Backend & frontend alignment",
+    "start": "2026-03-07T11:00:00",
+    "end": "2026-03-07T12:00:00",
+    "uid": ""
+  },
+  {
+    "id": 25,
+    "title": "Sprint Demo",
+    "description": "Showcase sprint results",
+    "start": "2026-03-07T13:00:00",
+    "end": "2026-03-07T14:00:00",
+    "uid": ""
+  },
+  {
+    "id": 26,
+    "title": "Team Lunch",
+    "description": "Social lunch",
+    "start": "2026-03-07T12:00:00",
+    "end": "2026-03-07T13:00:00",
+    "uid": ""
+  },
+  {
+    "id": 27,
+    "title": "Product Kickoff",
+    "description": "New project kickoff",
+    "start": "2026-03-08T09:00:00",
+    "end": "2026-03-08T10:30:00",
+    "uid": ""
+  },
+  {
+    "id": 28,
+    "title": "Design Sync",
+    "description": "Align on design tasks",
+    "start": "2026-03-08T11:00:00",
+    "end": "2026-03-08T12:00:00",
+    "uid": ""
+  },
+  {
+    "id": 29,
+    "title": "Client Call",
+    "description": "Discuss feedback",
+    "start": "2026-03-08T14:00:00",
+    "end": "2026-03-08T14:45:00",
+    "uid": ""
+  },
+  {
+    "id": 30,
+    "title": "Weekly Review",
+    "description": "Weekly status meeting",
+    "start": "2026-03-08T15:00:00",
+    "end": "2026-03-08T16:00:00",
+    "uid": ""
+  },
+  {
+    "id": 31,
+    "title": "Marketing Planning",
+    "description": "Plan campaigns",
+    "start": "2026-03-09T09:00:00",
+    "end": "2026-03-09T10:00:00",
+    "uid": ""
+  },
+  {
+    "id": 32,
+    "title": "Code Merge",
+    "description": "Merge PRs to main branch",
+    "start": "2026-03-09T11:00:00",
+    "end": "2026-03-09T12:00:00",
+    "uid": ""
+  },
+  {
+    "id": 33,
+    "title": "UX Testing",
+    "description": "User testing session",
+    "start": "2026-03-09T13:00:00",
+    "end": "2026-03-09T15:00:00",
+    "uid": ""
+  },
+  {
+    "id": 34,
+    "title": "Team Retrospective",
+    "description": "Review last sprint",
+    "start": "2026-03-09T15:30:00",
+    "end": "2026-03-09T16:30:00",
+    "uid": ""
+  },
+  {
+    "id": 35,
+    "title": "Quarterly Planning",
+    "description": "Plan next quarter goals",
+    "start": "2026-03-10T09:00:00",
+    "end": "2026-03-10T11:00:00",
+    "uid": ""
+  },
+  {
+    "id": 36,
+    "title": "Product Review",
+    "description": "Evaluate feature progress",
+    "start": "2026-03-10T11:30:00",
+    "end": "2026-03-10T12:30:00",
+    "uid": ""
+  },
+  {
+    "id": 37,
+    "title": "Tech Workshop",
+    "description": "Learning new tech",
+    "start": "2026-03-10T13:00:00",
+    "end": "2026-03-10T15:00:00",
+    "uid": ""
+  },
+  {
+    "id": 38,
+    "title": "Client Presentation",
+    "description": "Present project progress",
+    "start": "2026-03-10T15:30:00",
+    "end": "2026-03-10T16:30:00",
+    "uid": ""
+  },
+  {
+    "id": 39,
+    "title": "Team Lunch",
+    "description": "Monthly team lunch",
+    "start": "2026-03-11T12:00:00",
+    "end": "2026-03-11T13:00:00",
+    "uid": ""
+  },
+  {
+    "id": 40,
+    "title": "Product Demo",
+    "description": "Demonstrate new module",
+    "start": "2026-03-11T14:00:00",
+    "end": "2026-03-11T15:00:00",
+    "uid": ""
+  },
+  {
+    "uid": "",
+    "id": "3137f5bb-acd0-4ee7-8d73-3be9008dbb31",
+    "title": "dsaf",
+    "description": "dsaf",
     "start": "2026-03-12T07:00:00.000Z",
-    "end": "2026-03-13T06:59:59.000Z"
-  },
-  {
-    "id": "88d08717-54b2-41b3-ab4f-c25fa4fefb32",
-    "title": "Code",
-    "description": "Review",
-    "start": "2026-03-13T16:45:00.000Z",
-    "end": "2026-03-13T18:45:00.000Z"
+    "end": "2026-03-14T06:59:59.000Z"
   }
 ]
