@@ -21,6 +21,28 @@ export default function EventsFeed() {
   const [openModal, setOpenModal] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [availableViews, setAvailableViews] = useState([
+    "month",
+    "week",
+    "day",
+  ]);
+
+  useEffect(() => {
+    const updateViews = () => {
+      if (window.innerWidth < 768) {
+        // md breakpoint ~768px
+        setAvailableViews(["month", "day"]); // hide week on small screens
+      } else {
+        setAvailableViews(["month", "week", "day"]);
+      }
+    };
+
+    updateViews(); // initial check
+    window.addEventListener("resize", updateViews);
+
+    return () => window.removeEventListener("resize", updateViews);
+  }, []);
+
   useEffect(() => {
     fetch("/data/events.json")
       .then((response) => response.json())
@@ -62,11 +84,11 @@ export default function EventsFeed() {
         }}
       />
       <main className="flex w-full flex-col items-center justify-center py-16">
-        <div className="text-black bg-gray-400 rounded-lg p-2 w-full md:w-2/3 text-xs lg:text-lg h-[75vh]">
+        <div className="text-black bg-gray-400 rounded-lg p-2 md:w-2/3 text-xs lg:text-lg h-[75vh] w-[95vw]">
           <Calendar
             localizer={mLocalizer}
             events={events}
-            views={["month", "week", "day"]}
+            views={availableViews}
             view={view}
             date={date}
             onNavigate={setDate}

@@ -82,54 +82,5 @@
     "title": "Team Outing",
     "start": "2026-03-27T10:00:00Z",
     "end": "2026-03-27T18:00:00Z"
-  },
-  {
-    "id": 15,
-    "title": "Test ",
-    "description": "",
-    "start": "2026-03-10T07:00:00.000Z",
-    "end": "2026-03-12T06:59:59.000Z"
-  },
-  {
-    "id": 16,
-    "title": "Test ",
-    "description": "",
-    "start": "2026-03-10T07:00:00.000Z",
-    "end": "2026-03-12T06:59:59.000Z"
-  },
-  {
-    "id": 17,
-    "title": "Check",
-    "description": "",
-    "start": "2026-03-13T07:00:00.000Z",
-    "end": "2026-03-15T06:59:59.000Z"
-  },
-  {
-    "id": 18,
-    "title": "DFSADAS",
-    "description": "",
-    "start": "2026-03-18T07:00:00.000Z",
-    "end": "2026-03-21T06:59:59.000Z"
-  },
-  {
-    "id": 19,
-    "title": "Bug check",
-    "description": "",
-    "start": "2026-03-22T07:00:00.000Z",
-    "end": "2026-03-24T06:59:59.000Z"
-  },
-  {
-    "id": 20,
-    "title": "Loading check",
-    "description": "",
-    "start": "2026-03-21T07:00:00.000Z",
-    "end": "2026-03-22T06:59:59.000Z"
-  },
-  {
-    "id": 21,
-    "title": "Twenty Sixth",
-    "description": "",
-    "start": "2026-03-26T07:00:00.000Z",
-    "end": "2026-03-27T06:59:59.000Z"
   }
 ]

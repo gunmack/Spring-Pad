@@ -95,7 +95,7 @@ export default function AuthPage() {
   if (loading) {
     return (
       <div className="flex items-center gap-2 ">
-        <div className="h-5 w-5 border-2 border-white  border-t-transparent rounded-full animate-spin"></div>
+        <div className="h-1/2 w-1/2 border-2 border-white  border-t-transparent rounded-full animate-spin"></div>
         <div>Checking authentication...</div>
       </div>
     );
