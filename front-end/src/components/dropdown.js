@@ -4,61 +4,14 @@ import { useState, useRef, useEffect } from "react";
 import { signOut } from "firebase/auth";
 import { getFirebaseAuth } from "../firebase_config";
 import { useRouter, usePathname } from "next/navigation";
-
-function MenuItem({ item, pathname, setIsOpen }) {
-  const isActive = item.href && pathname === item.href;
-
-  return (
-    <li>
-      <a
-        href={item.href}
-        onClick={() => setIsOpen(false)}
-        className={`block px-6 py-3 rounded-lg transition-all ${
-          isActive
-            ? "bg-blue-500 text-white font-semibold border-l-4 border-blue-700"
-            : "text-black hover:bg-gray-200"
-        }`}
-      >
-        {item.label}
-      </a>
-    </li>
-  );
-}
-
-function MenuGroup({ title, items, pathname, setIsOpen }) {
-  return (
-    <div>
-      <div className="px-4 text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">
-        {title}
-      </div>
-
-      <ul className="flex flex-col gap-1">
-        {items.map((item) => (
-          <MenuItem
-            key={item.label}
-            item={item}
-            pathname={pathname}
-            setIsOpen={setIsOpen}
-          />
-        ))}
-      </ul>
-    </div>
-  );
-}
+import { MenuGroup, MenuOptions } from "./menu-struct";
 
 export default function DropdownMenu() {
-  const items = [
-    { label: "Calendar", href: "/calendar" },
-    { label: "Notes", href: "/notes" },
-    { label: "Profile", href: "/profile" },
-    { label: "Settings", href: "/settings" },
-    { label: "Sign Out", action: "logout" },
-  ];
-
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const router = useRouter();
   const pathname = usePathname();
+  const { mainItems, profileNsettings, logoutItem } = MenuOptions();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -82,16 +35,6 @@ export default function DropdownMenu() {
       alert("An error occurred while logging out. Please try again.");
     }
   };
-
-  const mainItems = (items ?? []).filter((i) =>
-    ["/calendar", "/notes"].includes(i.href),
-  );
-
-  const profileNsettings = (items ?? []).filter((i) =>
-    ["/profile", "/settings"].includes(i.href),
-  );
-
-  const logoutItem = (items ?? []).find((i) => i.action === "logout");
 
   return (
     <div className="sticky top-0 z-50 flex justify-start ">
