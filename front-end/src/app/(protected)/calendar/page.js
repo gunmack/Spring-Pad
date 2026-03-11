@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import moment, { weekdays } from "moment";
 import { Calendar, momentLocalizer, Views } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { handleAdd } from "./addEvent";
 import AddModal from "@/components/addModal";
 import {
   MonthEvents,
@@ -20,6 +19,7 @@ export default function EventsFeed() {
   const [view, setView] = useState("month");
   const [events, setEvents] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch("/data/events.json")
@@ -47,7 +47,19 @@ export default function EventsFeed() {
       <AddModal
         open={openModal}
         onClose={() => setOpenModal(false)}
-        onSubmit={handleAdd}
+        onSubmit={(savedEvent) => {
+          setLoading(true);
+          setEvents((prev) => [
+            ...prev,
+            {
+              ...savedEvent,
+              start: new Date(savedEvent.start),
+              end: new Date(savedEvent.end),
+            },
+          ]);
+          setLoading(false);
+          setOpenModal(false);
+        }}
       />
       <main className="flex w-full flex-col items-center justify-center py-16">
         <div className="text-black bg-gray-400 rounded-lg p-2 w-full md:w-2/3 text-xs lg:text-lg h-[75vh]">
