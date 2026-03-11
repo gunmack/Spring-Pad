@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function AddModal({ open, onClose, onSubmit }) {
+export default function AddEvent({ open, onClose, onSubmit }) {
   const [autoCategorize, setAutoCategorize] = useState(false);
   const [visibility, setVisibility] = useState(false);
   const [allDay, setAllDay] = useState(false);
@@ -31,7 +31,7 @@ export default function AddModal({ open, onClose, onSubmit }) {
             };
 
             try {
-              const response = await fetch("/api/notes", {
+              const response = await fetch("/api/events", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -39,13 +39,13 @@ export default function AddModal({ open, onClose, onSubmit }) {
                 body: JSON.stringify(newEvent),
               });
               if (!response.ok) {
-                throw new Error("Failed to add entry");
+                throw new Error("Failed to add event");
               }
               const savedEvent = await response.json();
-              console.log("Entry added successfully:", savedEvent);
+              console.log("Event added successfully:", savedEvent);
               onSubmit(savedEvent);
             } catch (error) {
-              console.error("Error adding entry:", error);
+              console.error("Error adding event:", error);
             }
             setAutoCategorize(false);
             setVisibility(false);

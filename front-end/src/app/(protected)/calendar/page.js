@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import moment, { weekdays } from "moment";
 import { Calendar, momentLocalizer, Views } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import AddModal from "@/components/addModal";
+import AddEvent from "@/components/addEventModal";
 import {
   MonthEvents,
   WeekEvents,
@@ -39,12 +39,12 @@ export default function EventsFeed() {
       <button
         className="fixed top-4 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-700text-white rounded-full flex items-center justify-center text-3xl shadow-lg z-50 cursor-pointer"
         onClick={() => setOpenModal(true)}
-        title="Create new entry"
+        title="Create new event"
       >
         +
       </button>
 
-      <AddModal
+      <AddEvent
         open={openModal}
         onClose={() => setOpenModal(false)}
         onSubmit={(savedEvent) => {
