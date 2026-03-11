@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Sprint Kickoff",
+    "description": "Planning for new sprint",
+    "start": "2026-03-18T09:00:00Z",
+    "end": "2026-03-18T10:30:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Team Lunch",
+    "description": "Lunch at cafe",
+    "start": "2026-03-21T12:00:00Z",
+    "end": "2026-03-21T13:00:00Z"
+  },
+  {
+    "id": 10,
+    "title": "All Day Workshop",
+    "description": "",
+    "start": "2026-03-31T00:00:00Z",
+    "end": "2026-03-31T23:59:59Z"
+  },
+  {
+    "id": 11,
+    "title": "April Kickoff",
+    "description": "Start of April planning",
+    "start": "2026-04-01T09:00:00Z",
+    "end": "2026-04-01T10:00:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Client Call",
+    "description": "Discuss project requirements",
+    "start": "2026-04-02T15:00:00Z",
+    "end": "2026-04-02T16:00:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Frontend Meeting",
+    "description": "Discuss Next.js features",
+    "start": "2026-04-03T11:00:00Z",
+    "end": "2026-04-03T12:00:00Z"
+  },
+  {
+    "id": 14,
+    "title": "All Hands",
+    "description": "Company meeting",
+    "start": "2026-04-05T17:00:00Z",
+    "end": "2026-04-05T18:00:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Hackathon",
+    "description": "24 hour coding event",
+    "start": "2026-04-07T09:00:00Z",
+    "end": "2026-04-08T09:00:00Z"
+  },
+  {
+    "id": 16,
+    "title": "Gym",
+    "description": "",
+    "start": "2026-04-10T07:00:00Z",
+    "end": "2026-04-10T08:00:00Z"
+  },
+  {
+    "id": 17,
+    "title": "Family Dinner",
+    "description": "",
+    "start": "2026-04-12T18:30:00Z",
+    "end": "2026-04-12T20:00:00Z"
+  },
+  {
+    "id": 18,
+    "title": "Release Day",
+    "description": "Deploy new build",
+    "start": "2026-04-15T09:00:00Z",
+    "end": "2026-04-15T17:00:00Z"
+  },
+  {
+    "id": 19,
+    "title": "Product Demo",
+    "description": "Demo to stakeholders",
+    "start": "2026-04-18T14:00:00Z",
+    "end": "2026-04-18T15:30:00Z"
+  },
+  {
+    "id": 20,
+    "title": "Vacation",
+    "description": "Taking time off",
+    "start": "2026-04-22T00:00:00Z",
+    "end": "2026-04-28T23:59:59Z"
+  },
+  {
+    "id": "78ce2132-6d29-4de9-8795-791017e490c4",
+    "title": "asdf",
+    "description": "dsafds",
+    "start": "2026-03-12T07:00:00.000Z",
+    "end": "2026-03-13T06:59:59.000Z"
+  },
+  {
+    "id": "88d08717-54b2-41b3-ab4f-c25fa4fefb32",
+    "title": "Code",
+    "description": "Review",
+    "start": "2026-03-13T16:45:00.000Z",
+    "end": "2026-03-13T18:45:00.000Z"
+  }
+]

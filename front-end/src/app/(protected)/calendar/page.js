@@ -5,6 +5,7 @@ import moment, { weekdays } from "moment";
 import { Calendar, momentLocalizer, Views } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import AddEvent from "@/components/addEventModal";
+import EventInfo from "@/components/eventInfoModal";
 import {
   MonthEvents,
   WeekEvents,
@@ -20,12 +21,44 @@ export default function EventsFeed() {
   const [events, setEvents] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   const [availableViews, setAvailableViews] = useState([
     "month",
     "week",
     "day",
   ]);
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`/api/events/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) throw new Error("Delete failed");
+
+      // update calendar immediately
+      setEvents((prev) => prev.filter((e) => e.id !== id));
+
+      // close modal
+      setSelectedEvent(null);
+    } catch (err) {
+      console.error("Error deleting event:", err);
+    }
+  };
+
+  const loadEvents = async () => {
+    const response = await fetch("/api/events");
+    const data = await response.json();
+
+    const convertedEvents = data.map((event) => ({
+      ...event,
+      start: new Date(event.start),
+      end: new Date(event.end),
+    }));
+
+    setEvents(convertedEvents);
+  };
 
   useEffect(() => {
     const updateViews = () => {
@@ -44,16 +77,7 @@ export default function EventsFeed() {
   }, []);
 
   useEffect(() => {
-    fetch("/data/events.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const convertedEvents = data.map((event) => ({
-          ...event,
-          start: new Date(event.start),
-          end: new Date(event.end),
-        }));
-        setEvents(convertedEvents);
-      });
+    loadEvents();
   }, []);
 
   return (
@@ -61,7 +85,7 @@ export default function EventsFeed() {
       <button
         className="fixed top-4 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-700text-white rounded-full flex items-center justify-center text-3xl shadow-lg z-50 cursor-pointer"
         onClick={() => setOpenModal(true)}
-        title="Create new event"
+        title="Add new event"
       >
         +
       </button>
@@ -85,12 +109,20 @@ export default function EventsFeed() {
       />
       <main className="flex w-full flex-col items-center justify-center py-16">
         <div className="text-black bg-gray-400 rounded-lg p-2 md:w-2/3 text-xs lg:text-lg h-[75vh] w-[95vw]">
+          {selectedEvent && (
+            <EventInfo
+              event={selectedEvent}
+              onClose={() => setSelectedEvent(null)}
+              onDelete={handleDelete}
+            />
+          )}
           <Calendar
             localizer={mLocalizer}
             events={events}
             views={availableViews}
             view={view}
             date={date}
+            onSelectEvent={(event) => setSelectedEvent(event)}
             onNavigate={setDate}
             onView={setView}
             step={60}
