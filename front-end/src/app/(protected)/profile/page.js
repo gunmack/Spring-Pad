@@ -11,9 +11,14 @@ export default function Profile() {
           </h1>
           {user && (
             <p className="mt-4 text-gray-700 dark:text-gray-300">
-              Logged in as: {user.displayName || user.email || "Guest"}
+              Logged in as: {user.displayName || "Unknown User"}
               <br />
-              User ID: {user.uid}
+              {user.displayName && (
+                <>
+                  User ID: {user.uid} <br />
+                  Email: {user.email}
+                </>
+              )}
             </p>
           )}
         </div>

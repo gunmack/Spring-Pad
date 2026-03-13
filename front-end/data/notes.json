@@ -1,0 +1,72 @@
+[
+  {
+    "n_id": 1,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Grocery List",
+    "n_data": "Milk, Eggs, Bread, Cheese, Apples"
+  },
+  {
+    "n_id": 2,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Project Ideas",
+    "n_data": "Build a personal website, Create a React calendar app, Explore AI note-taking tools"
+  },
+  {
+    "n_id": 3,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Meeting Notes",
+    "n_data": "Discussed project milestones, agreed on deadlines, assign tasks to team members"
+  },
+  {
+    "n_id": 4,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Book Recommendations",
+    "n_data": "Atomic Habits, Deep Work, The Pragmatic Programmer, Clean Code"
+  },
+  {
+    "n_id": 5,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Workout Plan",
+    "n_data": "Monday: Chest & Triceps, Wednesday: Back & Biceps, Friday: Legs & Shoulders"
+  },
+  {
+    "n_id": 6,
+    "n_type": "USER",
+    "n_owner": "",
+    "n_title": "Travel Checklist",
+    "n_data": "Passport, Tickets, Wallet, Phone charger, Clothes, Sunglasses"
+  },
+  {
+    "n_id": 7,
+    "n_type": "USER",
+    "n_owner": "",
+    "n_title": "Ideas for Blog",
+    "n_data": "JavaScript best practices, Tailwind CSS tips, React hooks deep dive, Next.js routing tricks"
+  },
+  {
+    "n_id": 8,
+    "n_type": "USER",
+    "n_owner": "",
+    "n_title": "Daily Affirmations",
+    "n_data": "I am capable, I am productive, I learn from every mistake, I embrace challenges"
+  },
+  {
+    "n_id": 9,
+    "n_type": "USER",
+    "n_owner": "",
+    "n_title": "Shopping List",
+    "n_data": "Laptop, Headphones, Mouse, Keyboard, Monitor"
+  },
+  {
+    "n_id": 10,
+    "n_type": "USER",
+    "n_owner": "",
+    "n_title": "Recipe Ideas",
+    "n_data": "Spaghetti Carbonara, Chicken Curry, Vegetable Stir Fry, Pancakes"
+  }
+]
