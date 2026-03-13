@@ -4,12 +4,12 @@ import EditorJS from "@editorjs/editorjs";
 import EditorjsList from "@editorjs/list";
 import { useAuth } from "../../context/AuthContext";
 import { loadNotes } from "./loadNotes";
+import { NoteCards } from "./notes-struct";
 import Paragraph from "@editorjs/paragraph";
 
-export default function Notes() {
+export default function NotesFeed() {
   const [notes, setNotes] = useState([]);
   const [openModal, setOpenModal] = useState(false);
-  const [loading, setLoading] = useState(false);
   const { user } = useAuth();
   const holderRef = useRef(null);
   const editorInstance = useRef(null);
@@ -69,20 +69,8 @@ export default function Notes() {
         <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
           <span className="text-blue-300">Notes</span>
         </h1>
-        <div className="mt-8 px-4 w-1/2">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {notes.map((note) => (
-              <div
-                key={note.n_id}
-                className="bg-white text-black p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200"
-              >
-                <p className="wrap-break-word">{note.n_title}</p>
-                {/* <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
-                  {new Date(note.created_at).toLocaleString()}
-                </p> */}
-              </div>
-            ))}
-          </div>
+        <div className="mt-8 w-1/2">
+          <NoteCards notes={notes} />
         </div>
 
         {openModal && (

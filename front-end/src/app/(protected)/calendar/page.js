@@ -89,7 +89,6 @@ export default function EventsFeed() {
         open={openModal}
         onClose={() => setOpenModal(false)}
         onSubmit={(savedEvent) => {
-          setLoading(true);
           setEvents((prev) => [
             ...prev,
             {
@@ -98,7 +97,6 @@ export default function EventsFeed() {
               end: new Date(savedEvent.end),
             },
           ]);
-          setLoading(false);
           setOpenModal(false);
         }}
       />
