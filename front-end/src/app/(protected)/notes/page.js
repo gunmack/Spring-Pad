@@ -1,23 +1,11 @@
 "use client";
-import { useState } from "react";
-import { useAuth } from "../../context/AuthContext";
-
 export default function Notes() {
-  const { user } = useAuth();
-
   return (
     <div>
-      <main className="flex  w-full flex-col items-center justify-center py-16 ">
-        <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
-            <span className="text-blue-300">Notes/New</span>
-          </h1>
-          {user && (
-            <p className="mt-4 text-gray-700 dark:text-gray-300">
-              Logged in as: {user.displayName || user.email}
-            </p>
-          )}
-        </div>
+      <main className="flex  flex-col items-center justify-center  ">
+        <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
+          <span className="text-blue-300">Notes</span>
+        </h1>
       </main>
     </div>
   );
