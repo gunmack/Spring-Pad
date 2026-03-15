@@ -94,7 +94,7 @@ export default function DropdownMenu() {
   const logoutItem = (items ?? []).find((i) => i.action === "logout");
 
   return (
-    <div className="sticky top-0 z-50 flex justify-start ">
+    <div className="fixed top-0 left-0 z-50 flex justify-start ">
       {/* Hamburger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
