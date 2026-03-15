@@ -66,16 +66,16 @@ export default function NotesFeed() {
       </button>
 
       <main className="flex  flex-col items-center justify-center ">
-        <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
-          <span className="text-blue-300">Notes</span>
-        </h1>
-        <div className="mt-8 w-1/2">
+        <div className="mt-8 w-2/3  ">
           <NoteCards notes={notes} />
         </div>
 
         {openModal && (
           <div className="fixed inset-0 flex items-center justify-center  backdrop-blur-sm z-50">
             <div className="flex flex-col w-[90vw] max-w-3xl bg-white rounded-lg shadow-lg overflow-auto p-6">
+              <h1 className="text-black font-bold text-xl text-center mb-4">
+                Add Note
+              </h1>
               <div className="bg-gray-50 text-black p-4 rounded-md border border-gray-200 shadow-inner min-h-75">
                 <div ref={holderRef}></div>
               </div>

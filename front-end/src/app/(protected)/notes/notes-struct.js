@@ -1,31 +1,45 @@
 "use client";
 import React, { useState } from "react";
 import NoteInfo from "@/components/noteInfoModal";
+import Masonry from "react-masonry-css";
+import "./notes.css";
 
 export const NoteCards = ({ notes }) => {
   const [selectedNote, setSelectedNote] = useState(null);
+
+  const breakpointColumnsObj = {
+    default: 3,
+    1280: 2,
+    800: 1,
+  };
+
   return (
-    <div className="px-4 py-6">
+    <div>
       {/* Modal rendered once */}
       {selectedNote && (
         <NoteInfo note={selectedNote} onClose={() => setSelectedNote(null)} />
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid "
+        columnClassName="my-masonry-grid_column"
+      >
         {notes.map((note) => (
           <div
             key={note.n_id}
-            className="bg-white text-black rounded-xl shadow-md hover:shadow-xl 
-                       transform transition duration-200 hover:scale-105 
-                       p-6 flex items-center justify-center cursor-pointer"
+            className="rounded-lg cursor-pointer"
             onClick={() => setSelectedNote(note)}
           >
-            <h2 className="text-lg font-semibold text-center">
-              {note.n_title}
-            </h2>
+            <h3 className="text-lg font-semibold mb-2">{note.n_title}</h3>
+            <p className="text-sm text-gray-600 font-medium ">
+              {note.n_data.length > 100
+                ? note.n_data.substring(0, 100) + "..."
+                : note.n_data}
+            </p>
           </div>
         ))}
-      </div>
+      </Masonry>
     </div>
   );
 };

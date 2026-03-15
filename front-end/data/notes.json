@@ -4,69 +4,139 @@
     "n_type": "USER",
     "n_owner": "jreedoy2002@gmail.com",
     "n_title": "Grocery List",
-    "n_data": "Milk, Eggs, Bread, Cheese, Apples"
+    "n_data": "Milk, Eggs, Bread, Cheese, Apples, Oranges, Bananas, Yogurt, Cereal, Coffee"
   },
   {
     "n_id": 2,
     "n_type": "USER",
     "n_owner": "jreedoy2002@gmail.com",
-    "n_title": "Project Ideas",
-    "n_data": "Build a personal website, Create a React calendar app, Explore AI note-taking tools"
+    "n_title": "Project Ideas for Portfolio",
+    "n_data": "Build a personal website, Create a React calendar app, Explore AI note-taking tools, Make a small e-commerce app, Implement a chatbot"
   },
   {
     "n_id": 3,
     "n_type": "USER",
     "n_owner": "jreedoy2002@gmail.com",
-    "n_title": "Meeting Notes",
-    "n_data": "Discussed project milestones, agreed on deadlines, assign tasks to team members"
+    "n_title": "Meeting Notes - Team Sync 3/14",
+    "n_data": "Discussed project milestones, agreed on deadlines, assigned tasks to team members, noted blockers and dependencies, summarized next steps"
   },
   {
     "n_id": 4,
     "n_type": "USER",
     "n_owner": "jreedoy2002@gmail.com",
     "n_title": "Book Recommendations",
-    "n_data": "Atomic Habits, Deep Work, The Pragmatic Programmer, Clean Code"
+    "n_data": "Atomic Habits, Deep Work, The Pragmatic Programmer, Clean Code, The Lean Startup, Thinking, Fast and Slow"
   },
   {
     "n_id": 5,
     "n_type": "USER",
     "n_owner": "jreedoy2002@gmail.com",
     "n_title": "Workout Plan",
-    "n_data": "Monday: Chest & Triceps, Wednesday: Back & Biceps, Friday: Legs & Shoulders"
+    "n_data": "Monday: Chest & Triceps, Wednesday: Back & Biceps, Friday: Legs & Shoulders, Core exercises every day, Stretching before and after workout"
   },
   {
     "n_id": 6,
     "n_type": "USER",
-    "n_owner": "",
-    "n_title": "Travel Checklist",
-    "n_data": "Passport, Tickets, Wallet, Phone charger, Clothes, Sunglasses"
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Travel Checklist - Europe Trip",
+    "n_data": "Passport, Tickets, Wallet, Phone charger, Clothes, Sunglasses, Travel insurance, Adapters, Maps, Toiletries"
   },
   {
     "n_id": 7,
     "n_type": "USER",
-    "n_owner": "",
-    "n_title": "Ideas for Blog",
-    "n_data": "JavaScript best practices, Tailwind CSS tips, React hooks deep dive, Next.js routing tricks"
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Ideas for Blog Posts",
+    "n_data": "JavaScript best practices, Tailwind CSS tips, React hooks deep dive, Next.js routing tricks, SEO optimization strategies, Accessibility improvements"
   },
   {
     "n_id": 8,
     "n_type": "USER",
-    "n_owner": "",
+    "n_owner": "jreedoy2002@gmail.com",
     "n_title": "Daily Affirmations",
-    "n_data": "I am capable, I am productive, I learn from every mistake, I embrace challenges"
+    "n_data": "I am capable, I am productive, I learn from every mistake, I embrace challenges, I am grateful for today"
   },
   {
     "n_id": 9,
     "n_type": "USER",
-    "n_owner": "",
-    "n_title": "Shopping List",
-    "n_data": "Laptop, Headphones, Mouse, Keyboard, Monitor"
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Shopping List - Electronics",
+    "n_data": "Laptop, Headphones, Mouse, Keyboard, Monitor, Webcam, External Hard Drive, USB Hub, HDMI Cable"
   },
   {
     "n_id": 10,
     "n_type": "USER",
-    "n_owner": "",
+    "n_owner": "jreedoy2002@gmail.com",
     "n_title": "Recipe Ideas",
-    "n_data": "Spaghetti Carbonara, Chicken Curry, Vegetable Stir Fry, Pancakes"
+    "n_data": "Spaghetti Carbonara, Chicken Curry, Vegetable Stir Fry, Pancakes, Chocolate Cake, Grilled Salmon, Caesar Salad, Tacos"
+  },
+  {
+    "n_id": 11,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Movie Watchlist",
+    "n_data": "Inception, Interstellar, The Matrix, The Dark Knight, Parasite, Everything Everywhere All At Once, Knives Out, Dune, Joker, Tenet"
+  },
+  {
+    "n_id": 12,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Learning Goals",
+    "n_data": "Master React, Learn TypeScript, Understand Redux Toolkit, Explore Node.js and Express, Practice GraphQL, Study Next.js 13 App Router, Learn Tailwind advanced patterns"
+  },
+  {
+    "n_id": 13,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Long Title Example for Testing Layout Behavior in UI",
+    "n_data": "This note has a very long title to see how the UI handles text wrapping, card width adjustment, and hover effects for different screen sizes and layouts"
+  },
+  {
+    "n_id": 14,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Short Note",
+    "n_data": "Just a quick reminder"
+  },
+  {
+    "n_id": 15,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Ideas for Side Projects",
+    "n_data": "Personal portfolio, Task tracker app, Weather app, Expense tracker, Note-taking app with Editor.js, Mini social media dashboard"
+  },
+  {
+    "n_id": 16,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Shopping List - Groceries",
+    "n_data": "Tomatoes, Onions, Garlic, Spinach, Bell Peppers, Chicken, Fish, Olive Oil, Salt, Pepper, Pasta"
+  },
+  {
+    "n_id": 17,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Random Thoughts",
+    "n_data": "Sometimes the simplest ideas lead to the best projects. Remember to take breaks. Innovation comes from curiosity and persistence."
+  },
+  {
+    "n_id": 18,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Favorite Quotes",
+    "n_data": "“Do one thing every day that scares you.” – Eleanor Roosevelt, “Simplicity is the ultimate sophistication.” – Leonardo da Vinci, “Stay hungry, stay foolish.” – Steve Jobs"
+  },
+  {
+    "n_id": 19,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Weekly Schedule",
+    "n_data": "Monday: Work, Tuesday: Gym, Wednesday: Work, Thursday: Meeting, Friday: Work, Saturday: Rest, Sunday: Leisure"
+  },
+  {
+    "n_id": 20,
+    "n_type": "USER",
+    "n_owner": "jreedoy2002@gmail.com",
+    "n_title": "Miscellaneous Notes",
+    "n_data": "Brainstorm ideas for new features, jot down meeting highlights, keep track of random thoughts and inspirations, organize learning resources"
   }
 ]

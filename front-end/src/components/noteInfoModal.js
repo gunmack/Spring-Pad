@@ -27,7 +27,7 @@ export default function NoteInfo({ note, onClose, onDelete }) {
         />
       )} */}
       {note && (
-        <div className="fixed inset-0  backdrop-blur-md z-50 flex items-center justify-center">
+        <div className="fixed inset-0  backdrop-blur-lg z-50 flex items-center justify-center">
           <div
             ref={menuRef}
             className="bg-white text-black rounded-lg p-2 max-w-2xl max-h-[80vh] overflow-auto relative flex flex-col"
