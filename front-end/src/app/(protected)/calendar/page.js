@@ -43,7 +43,7 @@ export default function Calendar() {
         onSubmit={handleAdd}
       />
 
-      <main className="flex  flex-col items-center justify-center  ">
+      <main className="flex  flex-col items-center justify-center py-16 ">
         <h1 className="text-5xl font-extrabold  sm:text-6xl text-center">
           <span className="text-blue-300">Calendar</span>
         </h1>
