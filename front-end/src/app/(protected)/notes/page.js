@@ -8,19 +8,20 @@ import { NoteCards } from "./notes-struct";
 import Paragraph from "@editorjs/paragraph";
 
 export default function NotesFeed() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState({});
   const [openModal, setOpenModal] = useState(false);
   const { user } = useAuth();
   const holderRef = useRef(null);
   const editorInstance = useRef(null);
 
   useEffect(() => {
+    if (!user?.email) return;
     const fetchNotes = async () => {
       const notesData = await loadNotes(user.email);
       setNotes(notesData);
     };
     fetchNotes();
-  }, [user.email]);
+  }, [user?.email]);
 
   useEffect(() => {
     if (openModal && holderRef.current && !editorInstance.current) {
@@ -58,16 +59,16 @@ export default function NotesFeed() {
   return (
     <div>
       <button
-        className="fixed top-4 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-700text-white rounded-full flex items-center justify-center text-3xl shadow-lg z-50 cursor-pointer"
+        className="fixed top-4 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center text-3xl shadow-lg z-50 cursor-pointer"
         onClick={() => setOpenModal(true)}
         title="Add new note"
       >
         +
       </button>
 
-      <main className="flex  flex-col items-center justify-center ">
-        <div className="mt-8 w-2/3  ">
-          <NoteCards notes={notes} />
+      <main className="flex flex-col items-center justify-center ">
+        <div className="mt-8 w-2/3">
+          <NoteCards groupedNotes={notes} />
         </div>
 
         {openModal && (

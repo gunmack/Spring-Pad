@@ -36,6 +36,21 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.my-masonry-header {
+  background-color: white;
+  color: black;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+
+.notes-content {
+  font-weight: 500;
+  color: #6b7280; /* gray-600 */
+  font-size: small;
+}
+
 /* Optional, different gutter size on mobile */
 @media (max-width: 800px) {
   .my-masonry-grid {

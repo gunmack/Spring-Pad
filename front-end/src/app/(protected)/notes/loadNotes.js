@@ -5,14 +5,21 @@ export const loadNotes = async (userEmail) => {
 
     const data = await response.json();
 
-    const convertedNotes = data.map((note) => ({
-      ...note,
-      id: note.n_id, // add n_idr as a copy of n_id
-    }));
+    const groupedNotes = data.reduce((acc, note) => {
+      const type = note.n_type || "DEFAULT";
+      const { n_id, n_title, n_data } = note;
 
-    return convertedNotes;
+      if (!acc[type]) {
+        acc[type] = [];
+      }
+      acc[type].push({ n_id, n_title, n_data });
+
+      return acc;
+    }, {});
+
+    return groupedNotes;
   } catch (err) {
     console.error("Error loading notes:", err);
-    return [];
+    return {};
   }
 };
