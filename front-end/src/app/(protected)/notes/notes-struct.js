@@ -54,7 +54,7 @@ export const NoteCards = ({ groupedNotes }) => {
                   onClick={() => setSelectedNote(note)}
                 >
                   <h3 className="text-lg font-semibold mb-2">{note.n_title}</h3>
-                  <p className="notes-content">{note.n_data}</p>
+                  <p className="notes-content">{JSON.stringify(note.n_data)}</p>
                 </div>
               ))}
             </Masonry>

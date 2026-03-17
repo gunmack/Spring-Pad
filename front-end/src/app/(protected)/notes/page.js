@@ -6,6 +6,7 @@ import { useAuth } from "../../context/AuthContext";
 import { loadNotes } from "./loadNotes";
 import { NoteCards } from "./notes-struct";
 import Paragraph from "@editorjs/paragraph";
+import { addNote } from "./addNote";
 
 export default function NotesFeed() {
   const [notes, setNotes] = useState({});
@@ -32,18 +33,30 @@ export default function NotesFeed() {
           title: {
             class: require("title-editorjs"),
             inlineToolbar: true,
+            config: {
+              placeholder: "Enter note title...",
+            },
           },
           header: {
             class: require("@editorjs/header"),
             inlineToolbar: true,
+            config: {
+              placeholder: "Enter header...",
+            },
           },
-          Paragraph: {
+          paragraph: {
             class: Paragraph,
             inlineToolbar: true,
+            config: {
+              placeholder: "Enter note content...",
+            },
           },
           list: {
             class: EditorjsList,
             inlineToolbar: true,
+            config: {
+              placeholder: "Enter list item...",
+            },
           },
         },
       });
@@ -80,7 +93,34 @@ export default function NotesFeed() {
               <div className="bg-gray-50 text-black p-4 rounded-md border border-gray-200 shadow-inner min-h-75">
                 <div ref={holderRef}></div>
               </div>
-              <div className="flex justify-end mt-4">
+              <div className="flex justify-between md:justify-end mt-4">
+                <button
+                  className="px-4 py-2 bg-green-400 hover:bg-green-500 rounded-lg shadow-md cursor-pointer mr-2"
+                  onClick={async () => {
+                    if (!editorInstance.current) return;
+
+                    try {
+                      // Save the content from EditorJS
+                      const outputData = await editorInstance.current.save();
+
+                      // Send it to backend
+                      const saved = await addNote(user.email, outputData); // actual EditorJS content
+                      console.log(
+                        "Note saved:",
+                        saved,
+                        "Output data:",
+                        outputData,
+                      );
+
+                      setOpenModal(false); // close modal
+                      // optionally update notes state here
+                    } catch (err) {
+                      console.error("Error saving note:", err);
+                    }
+                  }}
+                >
+                  Save
+                </button>
                 <button
                   className="px-4 py-2 bg-red-400 hover:bg-red-500 rounded-lg shadow-md cursor-pointer"
                   onClick={() => setOpenModal(false)}
