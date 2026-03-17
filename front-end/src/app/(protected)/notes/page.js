@@ -81,7 +81,13 @@ export default function NotesFeed() {
 
       <main className="flex flex-col items-center justify-center ">
         <div className="mt-8 w-2/3">
-          <NoteCards groupedNotes={notes} />
+          {notes && Object.keys(notes).length === 0 ? (
+            <p className="font-bold mt-8 text-xl text-white text-center">
+              No notes available.
+            </p>
+          ) : (
+            <NoteCards groupedNotes={notes} />
+          )}
         </div>
 
         {openModal && (
@@ -112,8 +118,19 @@ export default function NotesFeed() {
                         outputData,
                       );
 
-                      setOpenModal(false); // close modal
-                      // optionally update notes state here
+                      // Update the grouped notes state
+                      setNotes((prevNotes) => {
+                        const type = saved.n_type || "DEFAULT";
+                        const updated = { ...prevNotes };
+
+                        // If the type doesn't exist yet, create an array
+                        if (!updated[type]) updated[type] = [];
+
+                        updated[type] = [...updated[type], saved]; // append the new note
+                        return updated;
+                      });
+
+                      setOpenModal(false);
                     } catch (err) {
                       console.error("Error saving note:", err);
                     }
