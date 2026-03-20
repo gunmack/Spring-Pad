@@ -4,6 +4,7 @@ import NoteInfo from "@/components/noteInfoModal";
 import Masonry from "react-masonry-css";
 import "./notes.css";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { RenderEditorJS } from "@/components/CustomRenderer";
 
 export const NoteCards = ({ groupedNotes }) => {
   const [selectedNote, setSelectedNote] = useState(null);
@@ -31,10 +32,12 @@ export const NoteCards = ({ groupedNotes }) => {
       {Object.entries(groupedNotes || {}).map(([type, notes]) => (
         <div
           key={type}
-          onClick={() => toggleType(type)}
-          className="m-8 shadow-md rounded-lg px-8 py-4 bg-white hover:cursor-pointer"
+          className="m-2 md:m-8 shadow-md rounded-lg px-2 md:px-8 py-4 bg-white hover:cursor-pointer"
         >
-          <div className="my-masonry-header flex justify-between items-center ">
+          <div
+            className="my-masonry-header flex justify-between items-center "
+            onClick={() => toggleType(type)}
+          >
             <span className="font-bold text-sm md:text-lg">{type}</span>
             <span>
               {openType[type] ? <IoIosArrowDown /> : <IoIosArrowUp />}
@@ -50,11 +53,10 @@ export const NoteCards = ({ groupedNotes }) => {
               {notes.map((note) => (
                 <div
                   key={note.n_id}
-                  className="rounded-lg cursor-pointer"
+                  className="rounded-lg cursor-pointer border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-200 bg-white p-4"
                   onClick={() => setSelectedNote(note)}
                 >
-                  <h3 className="text-lg font-semibold mb-2">{note.n_title}</h3>
-                  <p className="notes-content">{JSON.stringify(note.n_data)}</p>
+                  <RenderEditorJS note={note} />
                 </div>
               ))}
             </Masonry>

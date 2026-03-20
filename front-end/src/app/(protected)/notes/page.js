@@ -1,12 +1,16 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import EditorJS from "@editorjs/editorjs";
-import EditorjsList from "@editorjs/list";
+// import EditorjsList from "@editorjs/list";
 import { useAuth } from "../../context/AuthContext";
 import { loadNotes } from "./loadNotes";
 import { NoteCards } from "./notes-struct";
 import Paragraph from "@editorjs/paragraph";
 import { addNote } from "./addNote";
+// import Header from "@editorjs/header";
+import Title from "title-editorjs";
+import TextStyleTool from "@skchawala/editorjs-text-style";
+import { editorTools } from "@/utils/EditorJSTools";
 
 export default function NotesFeed() {
   const [notes, setNotes] = useState({});
@@ -29,36 +33,7 @@ export default function NotesFeed() {
       editorInstance.current = new EditorJS({
         holder: holderRef.current,
         autofocus: true,
-        tools: {
-          title: {
-            class: require("title-editorjs"),
-            inlineToolbar: true,
-            config: {
-              placeholder: "Enter note title...",
-            },
-          },
-          header: {
-            class: require("@editorjs/header"),
-            inlineToolbar: true,
-            config: {
-              placeholder: "Enter header...",
-            },
-          },
-          paragraph: {
-            class: Paragraph,
-            inlineToolbar: true,
-            config: {
-              placeholder: "Enter note content...",
-            },
-          },
-          list: {
-            class: EditorjsList,
-            inlineToolbar: true,
-            config: {
-              placeholder: "Enter list item...",
-            },
-          },
-        },
+        tools: editorTools,
       });
     }
 
@@ -92,58 +67,60 @@ export default function NotesFeed() {
 
         {openModal && (
           <div className="fixed inset-0 flex items-center justify-center  backdrop-blur-sm z-50">
-            <div className="flex flex-col w-[90vw] max-w-3xl bg-white rounded-lg shadow-lg overflow-auto p-6">
-              <h1 className="text-black font-bold text-xl text-center mb-4">
-                Add Note
-              </h1>
-              <div className="bg-gray-50 text-black p-4 rounded-md border border-gray-200 shadow-inner min-h-75">
-                <div ref={holderRef}></div>
-              </div>
-              <div className="flex justify-between md:justify-end mt-4">
-                <button
-                  className="px-4 py-2 bg-green-400 hover:bg-green-500 rounded-lg shadow-md cursor-pointer mr-2"
-                  onClick={async () => {
-                    if (!editorInstance.current) return;
+            <div className="bg-white w-full max-w-2xl md:max-w-4xl p-4 rounded-lg shadow-lg">
+              <div className="flex flex-col max-w-xl md:max-w-3xl  mx-8 py-6 overflow-auto">
+                <h1 className="text-black font-bold text-xl text-center mb-4">
+                  Add Note
+                </h1>
+                <div className=" bg-gray-50 text-black rounded-md border border-gray-200 shadow-inner max-h-[60vh] overflow-auto">
+                  <div ref={holderRef}></div>
+                </div>
+                <div className="flex justify-between md:justify-end mt-4">
+                  <button
+                    className="px-4 py-2 bg-green-400 hover:bg-green-500 rounded-lg shadow-md cursor-pointer mr-2"
+                    onClick={async () => {
+                      if (!editorInstance.current) return;
 
-                    try {
-                      // Save the content from EditorJS
-                      const outputData = await editorInstance.current.save();
+                      try {
+                        // Save the content from EditorJS
+                        const outputData = await editorInstance.current.save();
 
-                      // Send it to backend
-                      const saved = await addNote(user.email, outputData); // actual EditorJS content
-                      console.log(
-                        "Note saved:",
-                        saved,
-                        "Output data:",
-                        outputData,
-                      );
+                        // Send it to backend
+                        const saved = await addNote(user.email, outputData); // actual EditorJS content
+                        console.log(
+                          "Note saved:",
+                          saved,
+                          "Output data:",
+                          outputData,
+                        );
 
-                      // Update the grouped notes state
-                      setNotes((prevNotes) => {
-                        const type = saved.n_type || "DEFAULT";
-                        const updated = { ...prevNotes };
+                        // Update the grouped notes state
+                        setNotes((prevNotes) => {
+                          const type = saved.n_type || "DEFAULT";
+                          const updated = { ...prevNotes };
 
-                        // If the type doesn't exist yet, create an array
-                        if (!updated[type]) updated[type] = [];
+                          // If the type doesn't exist yet, create an array
+                          if (!updated[type]) updated[type] = [];
 
-                        updated[type] = [...updated[type], saved]; // append the new note
-                        return updated;
-                      });
+                          updated[type] = [...updated[type], saved]; // append the new note
+                          return updated;
+                        });
 
-                      setOpenModal(false);
-                    } catch (err) {
-                      console.error("Error saving note:", err);
-                    }
-                  }}
-                >
-                  Save
-                </button>
-                <button
-                  className="px-4 py-2 bg-red-400 hover:bg-red-500 rounded-lg shadow-md cursor-pointer"
-                  onClick={() => setOpenModal(false)}
-                >
-                  Close
-                </button>
+                        setOpenModal(false);
+                      } catch (err) {
+                        console.error("Error saving note:", err);
+                      }
+                    }}
+                  >
+                    Save
+                  </button>
+                  <button
+                    className="px-4 py-2 bg-red-400 hover:bg-red-500 rounded-lg shadow-md cursor-pointer"
+                    onClick={() => setOpenModal(false)}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           </div>

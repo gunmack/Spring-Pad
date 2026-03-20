@@ -7,12 +7,12 @@ export const loadNotes = async (userEmail) => {
 
     const groupedNotes = data.reduce((acc, note) => {
       const type = note.n_type || "DEFAULT";
-      const { n_id, n_title, n_data } = note;
+      const { n_id, n_type, n_data } = note;
 
       if (!acc[type]) {
         acc[type] = [];
       }
-      acc[type].push({ n_id, n_title, n_data });
+      acc[type].push({ n_id, n_type, n_data });
 
       return acc;
     }, {});

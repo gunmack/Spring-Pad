@@ -1,7 +1,7 @@
 [
   {
     "n_id": "1a2b3c4d-0001-4ef0-aaaa-111111111111",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773748000000,
@@ -19,7 +19,7 @@
   },
   {
     "n_id": "1a2b3c4d-0002-4ef0-aaaa-222222222222",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773748100000,
@@ -37,7 +37,7 @@
   },
   {
     "n_id": "2b3c4d5e-0003-4ef0-bbbb-333333333333",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "Diary",
     "n_data": {
       "time": 1773748200000,
@@ -55,7 +55,7 @@
   },
   {
     "n_id": "2b3c4d5e-0004-4ef0-bbbb-444444444444",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "Diary",
     "n_data": {
       "time": 1773748300000,
@@ -73,7 +73,7 @@
   },
   {
     "n_id": "3c4d5e6f-0005-4ef0-cccc-555555555555",
-    "n_owner": "user2@example.com",
+    "n_owner": "",
     "n_type": "Work",
     "n_data": {
       "time": 1773748400000,
@@ -91,7 +91,7 @@
   },
   {
     "n_id": "3c4d5e6f-0006-4ef0-cccc-666666666666",
-    "n_owner": "user2@example.com",
+    "n_owner": "",
     "n_type": "Work",
     "n_data": {
       "time": 1773748500000,
@@ -109,7 +109,7 @@
   },
   {
     "n_id": "4d5e6f7g-0007-4ef0-dddd-777777777777",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "Ideas",
     "n_data": {
       "time": 1773748600000,
@@ -127,7 +127,7 @@
   },
   {
     "n_id": "4d5e6f7g-0008-4ef0-dddd-888888888888",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "Ideas",
     "n_data": {
       "time": 1773748700000,
@@ -145,7 +145,7 @@
   },
   {
     "n_id": "5e6f7g8h-0009-4ef0-eeee-999999999999",
-    "n_owner": "user2@example.com",
+    "n_owner": "",
     "n_type": "Travel",
     "n_data": {
       "time": 1773748800000,
@@ -163,7 +163,7 @@
   },
   {
     "n_id": "5e6f7g8h-0010-4ef0-eeee-101010101010",
-    "n_owner": "user2@example.com",
+    "n_owner": "",
     "n_type": "Travel",
     "n_data": {
       "time": 1773748900000,
@@ -181,7 +181,7 @@
   },
   {
     "n_id": "6f7g8h9i-0011-4ef0-ffff-111111111111",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773749000000,
@@ -199,7 +199,7 @@
   },
   {
     "n_id": "6f7g8h9i-0012-4ef0-ffff-121212121212",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "Diary",
     "n_data": {
       "time": 1773749100000,
@@ -217,7 +217,7 @@
   },
   {
     "n_id": "7g8h9i0j-0013-4ef0-gggg-131313131313",
-    "n_owner": "user2@example.com",
+    "n_owner": "",
     "n_type": "Work",
     "n_data": {
       "time": 1773749200000,
@@ -235,7 +235,7 @@
   },
   {
     "n_id": "7g8h9i0j-0014-4ef0-gggg-141414141414",
-    "n_owner": "user2@example.com",
+    "n_owner": "",
     "n_type": "Ideas",
     "n_data": {
       "time": 1773749300000,
@@ -253,7 +253,7 @@
   },
   {
     "n_id": "8h9i0j1k-0015-4ef0-hhhh-151515151515",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "Travel",
     "n_data": {
       "time": 1773749400000,
@@ -271,7 +271,7 @@
   },
   {
     "n_id": "adfd9049-ef17-4426-8e88-ebf969498a5e",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773748328283,
@@ -307,7 +307,7 @@
   },
   {
     "n_id": "924f9551-8cbc-458e-a02e-932b3177a105",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773749648788,
@@ -335,7 +335,7 @@
   },
   {
     "n_id": "4fc39d7b-32c8-4a19-a49c-869a09e43813",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773749933455,
@@ -353,7 +353,7 @@
   },
   {
     "n_id": "11438065-c37e-4446-b1b8-a449d177eeff",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773749954255,
@@ -371,7 +371,7 @@
   },
   {
     "n_id": "ceefc6a2-eab8-45c3-a580-793d462e993a",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773750075994,
@@ -389,7 +389,7 @@
   },
   {
     "n_id": "0379330b-d83a-449a-aea0-02f53eb52878",
-    "n_owner": " ",
+    "n_owner": "",
     "n_type": "DEFAULT",
     "n_data": {
       "time": 1773750132374,
@@ -409,6 +409,1116 @@
           "type": "paragraph",
           "data": {
             "text": "Hello World"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "6a185610-bf71-471b-aeb1-fb7d574d07dc",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1773750500011,
+      "blocks": [
+        {
+          "id": "jZ9UIHOlmj",
+          "type": "title",
+          "data": {
+            "text": "Test Title",
+            "color": "",
+            "alignText": "text-align-center",
+            "titleType": "H1"
+          }
+        },
+        {
+          "id": "oI-GXi2Ik2",
+          "type": "header",
+          "data": {
+            "text": "Test Heading",
+            "level": 2
+          }
+        },
+        {
+          "id": "dXFltkfITS",
+          "type": "paragraph",
+          "data": {
+            "text": "Test text"
+          }
+        },
+        {
+          "id": "noCT_Ec9rW",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Test unordered list",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "nlBU_nljZ4",
+          "type": "list",
+          "data": {
+            "style": "ordered",
+            "meta": {
+              "counterType": "numeric"
+            },
+            "items": [
+              {
+                "content": "Test ordered list",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "20qNJwKnza",
+          "type": "list",
+          "data": {
+            "style": "checklist",
+            "meta": {},
+            "items": [
+              {
+                "content": "Test checklist",
+                "meta": {
+                  "checked": false
+                },
+                "items": []
+              }
+            ]
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "b06809fd-80cb-4b37-9d07-3f077fe1b7c0",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1773892116517,
+      "blocks": [
+        {
+          "id": "mnC-iYLISm",
+          "type": "paragraph",
+          "data": {
+            "text": "Testing blocks ID"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "70be6b59-99ad-4285-85b7-b74de50e0026",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1773892156969,
+      "blocks": [
+        {
+          "id": "BZQDuP-Xav",
+          "type": "paragraph",
+          "data": {
+            "text": "dsfasdf"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "5147159f-95bc-4c7b-9b2c-96cc6c51a809",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1773896720944,
+      "blocks": [
+        {
+          "id": "-ZohzXd8qA",
+          "type": "header",
+          "data": {
+            "text": "Hello",
+            "level": 2
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "59dbbbe0-1961-4a6b-a37f-c031b06c6f10",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1773897433710,
+      "blocks": [
+        {
+          "id": "4aAPP8gftW",
+          "type": "list",
+          "data": {
+            "style": "ordered",
+            "meta": {
+              "counterType": "numeric"
+            },
+            "items": [
+              {
+                "content": "A",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "B",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "C",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "D",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "675b4508-2e3c-4ccd-ae64-a9b54cb2f140",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1773898668471,
+      "blocks": [
+        {
+          "id": "Fuqt3UsCPN",
+          "type": "list",
+          "data": {
+            "style": "checklist",
+            "meta": {},
+            "items": [
+              {
+                "content": "Testing checklist",
+                "meta": {
+                  "checked": false
+                },
+                "items": []
+              },
+              {
+                "content": "Does it work?",
+                "meta": {
+                  "checked": false
+                },
+                "items": []
+              }
+            ]
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "ce69efb3-c0d0-40e7-91ff-6fac269ff1bd",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774037792600,
+      "blocks": [
+        {
+          "id": "8G4PxgxKj9",
+          "type": "header",
+          "data": {
+            "text": "testing heading",
+            "level": 3
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "time": 1774000000000,
+    "blocks": [
+      {
+        "id": "title1",
+        "type": "title",
+        "data": {
+          "text": "The Future of Note-Taking",
+          "alignText": "text-left",
+          "titleType": "H1"
+        }
+      },
+      {
+        "id": "header1",
+        "type": "header",
+        "data": {
+          "text": "Introduction",
+          "level": 2
+        }
+      },
+      {
+        "id": "p1",
+        "type": "paragraph",
+        "data": {
+          "text": "Note-taking has evolved dramatically over the past decade. From handwritten journals to fully digital ecosystems, the way we capture and process information has changed in both form and function. Modern tools allow users to organize thoughts, collaborate in real time, and integrate multimedia seamlessly into their workflows."
+        }
+      },
+      {
+        "id": "p2",
+        "type": "paragraph",
+        "data": {
+          "text": "Applications like Editor.js provide a block-based approach that mirrors how people naturally think—breaking information into chunks. This makes editing, rearranging, and rendering content far more intuitive compared to traditional text editors."
+        }
+      },
+      {
+        "id": "header2",
+        "type": "header",
+        "data": {
+          "text": "Key Benefits",
+          "level": 2
+        }
+      },
+      {
+        "id": "list1",
+        "type": "list",
+        "data": {
+          "style": "unordered",
+          "items": [
+            {
+              "content": "Modular content structure for flexibility",
+              "meta": {},
+              "items": []
+            },
+            {
+              "content": "Easy integration with modern frameworks like React",
+              "meta": {},
+              "items": []
+            },
+            {
+              "content": "Custom block rendering for full design control",
+              "meta": {},
+              "items": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "header3",
+        "type": "header",
+        "data": {
+          "text": "Steps to Build a Note App",
+          "level": 3
+        }
+      },
+      {
+        "id": "list2",
+        "type": "list",
+        "data": {
+          "style": "ordered",
+          "items": [
+            {
+              "content": "Set up your frontend with React or Next.js",
+              "meta": {},
+              "items": []
+            },
+            {
+              "content": "Integrate Editor.js and configure tools",
+              "meta": {},
+              "items": []
+            },
+            {
+              "content": "Store structured JSON data in your backend",
+              "meta": {},
+              "items": []
+            },
+            {
+              "content": "Render content using a custom renderer or Editor.js viewer",
+              "meta": {},
+              "items": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "header4",
+        "type": "header",
+        "data": {
+          "text": "Checklist Example",
+          "level": 3
+        }
+      },
+      {
+        "id": "list3",
+        "type": "list",
+        "data": {
+          "style": "checklist",
+          "items": [
+            {
+              "content": "Design UI layout",
+              "meta": {
+                "checked": true
+              },
+              "items": []
+            },
+            {
+              "content": "Implement Editor.js renderer",
+              "meta": {
+                "checked": false
+              },
+              "items": []
+            },
+            {
+              "content": "Optimize performance for large datasets",
+              "meta": {
+                "checked": false
+              },
+              "items": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "header5",
+        "type": "header",
+        "data": {
+          "text": "Conclusion",
+          "level": 2
+        }
+      },
+      {
+        "id": "p3",
+        "type": "paragraph",
+        "data": {
+          "text": "Building a modern note-taking application requires balancing performance, usability, and flexibility. By leveraging tools like Editor.js and combining them with custom renderers, developers can create powerful and scalable systems that adapt to a wide range of use cases. Whether for personal journaling or collaborative workflows, structured content is the future."
+        }
+      }
+    ],
+    "version": "2.31.5"
+  },
+  {
+    "n_id": "3951a889-77a4-48be-a76f-7c9dcec24a0d",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774040499692,
+      "blocks": [
+        {
+          "id": "CKWeIY_yau",
+          "type": "header",
+          "data": {
+            "text": "<b>The Future of Note-Taking</b>",
+            "level": 1
+          }
+        },
+        {
+          "id": "G1ov2qP9gg",
+          "type": "header",
+          "data": {
+            "text": "<b><i>Introduction</i></b>",
+            "level": 3
+          }
+        },
+        {
+          "id": "ONuAIXesQ3",
+          "type": "paragraph",
+          "data": {
+            "text": "Note-taking has evolved dramatically over the past decade. From handwritten journals to fully digital ecosystems, the way we capture and process information has changed in both form and function. Modern tools allow users to organize thoughts, collaborate in real time, and integrate multimedia seamlessly into their workflows."
+          }
+        },
+        {
+          "id": "4LwNWbljN7",
+          "type": "paragraph",
+          "data": {
+            "text": "Applications like Editor.js provide a block-based approach that mirrors how people naturally think—breaking information into chunks. This makes editing, rearranging, and rendering content far more intuitive compared to traditional text editors."
+          }
+        },
+        {
+          "id": "CDIi0LIGwQ",
+          "type": "header",
+          "data": {
+            "text": "<b>Key Benefits</b>",
+            "level": 2
+          }
+        },
+        {
+          "id": "1_XUESJpFD",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Modular content structure for flexibility\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Easy integration with modern frameworks like React\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Custom block rendering for full design control\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "8VDMD7XK91",
+          "type": "header",
+          "data": {
+            "text": "<b><i>Steps to Build a Note App</i></b>",
+            "level": 2
+          }
+        },
+        {
+          "id": "S-NyzimOUK",
+          "type": "list",
+          "data": {
+            "style": "ordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Set up your frontend with React or Next.js\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Integrate Editor.js and configure tools\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Store structured JSON data in your backend\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Render content using a custom renderer or Editor.js viewer\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "CK3OUJ8pKo",
+          "type": "header",
+          "data": {
+            "text": "<b><i>Checklist Example</i></b>",
+            "level": 2
+          }
+        },
+        {
+          "id": "jfFWFK3zH3",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": " Design UI layout\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": " Implement Editor.js renderer\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": " Optimize performance for large datasets\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "FjaZEYa5vy",
+          "type": "header",
+          "data": {
+            "text": "<b><i>Advanced Considerations</i></b>",
+            "level": 2
+          }
+        },
+        {
+          "id": "2I5_rZhIJL",
+          "type": "paragraph",
+          "data": {
+            "text": "As your note-taking app grows, you may encounter challenges such as:"
+          }
+        },
+        {
+          "id": "RlKd3nWVXl",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Handling extremely large documents efficiently\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Supporting nested lists, tables, and embedded media\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Ensuring smooth collaboration between multiple users\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Maintaining accessibility and responsive design\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "3MbL3qWVjG",
+          "type": "header",
+          "data": {
+            "text": "<b><i>Conclusion</i></b>",
+            "level": 2
+          }
+        },
+        {
+          "id": "GEwtL25qeJ",
+          "type": "paragraph",
+          "data": {
+            "text": "Building a modern note-taking application requires balancing performance, usability, and flexibility. By leveraging tools like Editor.js and combining them with custom renderers, developers can create powerful and scalable systems that adapt to a wide range of use cases. Whether for personal journaling or collaborative workflows, structured content is the future."
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "50424b2c-e0d7-4a75-b63f-76b3023eb64e",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774040784808,
+      "blocks": [
+        {
+          "id": "BgAQX62mU-",
+          "type": "header",
+          "data": {
+            "text": "asdf",
+            "level": 2
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "a73d1c88-6828-4621-9193-6542e6b24cd7",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774042885333,
+      "blocks": [
+        {
+          "id": "EMIhQCSDIV",
+          "type": "title",
+          "data": {
+            "text": "Testing",
+            "color": "Black",
+            "alignText": "Text-Align-Center",
+            "titleType": "H4"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "64d73dda-e9fe-472e-a7e5-65bd71acd7bd",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774043008092,
+      "blocks": [
+        {
+          "id": "jhbaiEDGB_",
+          "type": "header",
+          "data": {
+            "text": "<b><i>The Future of Note-Taking</i></b>",
+            "level": 3
+          }
+        },
+        {
+          "id": "HxFowB4Tki",
+          "type": "paragraph",
+          "data": {
+            "text": "In the digital age, the way we capture, store, and recall information has changed dramatically. Traditional paper notebooks, while nostalgic, are increasingly being replaced by digital note-taking tools that offer flexibility, searchability, and interactivity."
+          }
+        },
+        {
+          "id": "vX3MZT7gJ7",
+          "type": "header",
+          "data": {
+            "text": "Advantages of Digital Notes",
+            "level": 2
+          }
+        },
+        {
+          "id": "y2p3bOI-08",
+          "type": "paragraph",
+          "data": {
+            "text": "Digital notes allow you to integrate multimedia—images, audio, videos, and diagrams—all in the same document. Features like version control, cloud sync, and collaborative editing turn notes into living documents that evolve over time."
+          }
+        },
+        {
+          "id": "uI1qCkDp7x",
+          "type": "header",
+          "data": {
+            "text": "<b><i>Challenges and Pitfalls</i></b>",
+            "level": 2
+          }
+        },
+        {
+          "id": "6SagliB29I",
+          "type": "paragraph",
+          "data": {
+            "text": "While flexible, digital note-taking comes with challenges:"
+          }
+        },
+        {
+          "id": "a9HMcetH-U",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Information overload\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Fragmented notes across multiple apps\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Maintaining consistent organizational structures\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "psTG0gzbUc",
+          "type": "paragraph",
+          "data": {
+            "text": "Effective note-taking now requires thoughtful curation, periodic review, and using tools that support linking concepts, tagging, and summarization."
+          }
+        },
+        {
+          "id": "Ew0KDLGdom",
+          "type": "header",
+          "data": {
+            "text": "Organizational Impact",
+            "level": 2
+          }
+        },
+        {
+          "id": "a-yxkHMx6i",
+          "type": "paragraph",
+          "data": {
+            "text": "For teams and organizations, digital notes become shared knowledge repositories. They facilitate:"
+          }
+        },
+        {
+          "id": "3N5zSSxi48",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Collective insight building\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Best practices sharing\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Continuity despite staff changes\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "F8AyassRtK",
+          "type": "paragraph",
+          "data": {
+            "text": "AI-assisted summaries, smart search, and interactive visualizations enhance organizational knowledge management."
+          }
+        },
+        {
+          "id": "A0lTo0GOR7",
+          "type": "header",
+          "data": {
+            "text": "The Role of AI in Note-Taking",
+            "level": 3
+          }
+        },
+        {
+          "id": "uVowO89-_x",
+          "type": "paragraph",
+          "data": {
+            "text": "The integration of AI into note-taking promises to:"
+          }
+        },
+        {
+          "id": "6azLZl2u5e",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Highlight patterns in your notes\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Generate summaries automatically\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Suggest related readings\n",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Predict the information you may need next\n",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "s_VGBfAcGi",
+          "type": "paragraph",
+          "data": {
+            "text": "While these features offer efficiency, they also raise considerations around privacy, security, and over-reliance on automation."
+          }
+        },
+        {
+          "id": "0em_GCJ7dy",
+          "type": "header",
+          "data": {
+            "text": "Conclusion",
+            "level": 2
+          }
+        },
+        {
+          "id": "SI3ccxoCRo",
+          "type": "paragraph",
+          "data": {
+            "text": "The future of note-taking isn’t just about capturing information—it’s about understanding, connecting ideas, and amplifying human intelligence. Whether for personal productivity, research, or enterprise knowledge management, the evolution of note-taking tools will continue to shape how we think, learn, and create."
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "11e59f52-fb56-468d-81a3-e43515552df5",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774043209267,
+      "blocks": [
+        {
+          "id": "IdnLtx9_w9",
+          "type": "title",
+          "data": {
+            "text": "Heading level 4",
+            "color": "",
+            "alignText": "text-align-center",
+            "titleType": "H4"
+          }
+        },
+        {
+          "id": "ITsN6smc5p",
+          "type": "paragraph",
+          "data": {
+            "text": "Some text"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "ed3e6d2f-3d31-4349-8488-80143ca3a324",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774043295944,
+      "blocks": [
+        {
+          "id": "u-bstBCKfe",
+          "type": "title",
+          "data": {
+            "text": "H3 Align-Right",
+            "color": "",
+            "alignText": "Text-Align-Right",
+            "titleType": "H3"
+          }
+        },
+        {
+          "id": "FEePaGK-Cd",
+          "type": "paragraph",
+          "data": {
+            "text": "Some text"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "6c851137-857c-4782-9cea-319fd9cd2516",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774044424281,
+      "blocks": [
+        {
+          "id": "P9GdU-5VPV",
+          "type": "paragraph",
+          "data": {
+            "text": "asdf"
+          }
+        },
+        {
+          "id": "LS9HVyZItk",
+          "type": "title",
+          "data": {
+            "text": "Title",
+            "color": "",
+            "alignText": "text-align-center",
+            "titleType": "H1"
+          }
+        },
+        {
+          "id": "90vEFjhPQJ",
+          "type": "paragraph",
+          "data": {
+            "text": "dsaf"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "4e2f3263-cf93-454d-baab-4a89873d739b",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774044478807,
+      "blocks": [
+        {
+          "id": "2TNFawoS_e",
+          "type": "paragraph",
+          "data": {
+            "text": "<b><i>asdfdasfasdf</i></b>"
+          }
+        },
+        {
+          "id": "QUHwrQsZy_",
+          "type": "paragraph",
+          "data": {
+            "text": "<i>sadfdsafdsafas</i>"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "edb7f98c-83da-4812-849b-0968380d5f75",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774044532652,
+      "blocks": [
+        {
+          "id": "bwBYIQAwu3",
+          "type": "paragraph",
+          "data": {
+            "text": "Meal prep:"
+          }
+        },
+        {
+          "id": "IAW8wh4h6p",
+          "type": "paragraph",
+          "data": {
+            "text": "1. Rice<br>2. Chicken<br>3. Veggies"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "621de39c-2cd1-4a0c-93ae-47b499114642",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774045996283,
+      "blocks": [
+        {
+          "id": "hUBqsIwb1u",
+          "type": "title",
+          "data": {
+            "text": "Align Left",
+            "color": "",
+            "alignText": "Text-Align-Left",
+            "titleType": "H1"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "0856e3b5-2e25-4fa1-a691-5208657f6ebe",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774046009444,
+      "blocks": [
+        {
+          "id": "BrCUr273R_",
+          "type": "title",
+          "data": {
+            "text": "Align Center",
+            "color": "",
+            "alignText": "Text-Align-Center",
+            "titleType": "H1"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "b84cbaf5-ce2a-44ee-8631-db97d110cdaf",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774046043479,
+      "blocks": [
+        {
+          "id": "Ss5yinDENU",
+          "type": "title",
+          "data": {
+            "text": "Center",
+            "color": "",
+            "alignText": "Text-Align-Center",
+            "titleType": "H1"
+          }
+        },
+        {
+          "id": "PjP9R4aIPv",
+          "type": "paragraph",
+          "data": {
+            "text": "sadfdasfas"
+          }
+        },
+        {
+          "id": "0hLWaGHbIS",
+          "type": "paragraph",
+          "data": {
+            "text": "asdfdsafsdajkfhksdf"
+          }
+        },
+        {
+          "id": "p3nVg-VKoh",
+          "type": "paragraph",
+          "data": {
+            "text": "jkdshfkjashjkfd"
+          }
+        },
+        {
+          "id": "yEKyuAZYIE",
+          "type": "paragraph",
+          "data": {
+            "text": "jdksahfkjhnsdkjfjhas"
+          }
+        }
+      ],
+      "version": "2.31.5"
+    }
+  },
+  {
+    "n_id": "2cab4d85-de54-4a6c-bce9-283c982e0f5b",
+    "n_owner": "",
+    "n_type": "DEFAULT",
+    "n_data": {
+      "time": 1774046177867,
+      "blocks": [
+        {
+          "id": "ZZpRhELDpO",
+          "type": "paragraph",
+          "data": {
+            "text": "sadfsdaf"
+          }
+        },
+        {
+          "id": "htDL0KYOXS",
+          "type": "title",
+          "data": {
+            "text": "Title",
+            "color": "",
+            "alignText": "Text-Align-Center",
+            "titleType": "H1"
+          }
+        },
+        {
+          "id": "dq9Xghzvw-",
+          "type": "paragraph",
+          "data": {
+            "text": "sdafdsaf"
           }
         }
       ],
