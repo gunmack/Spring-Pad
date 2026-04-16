@@ -31,7 +31,7 @@ export default function NoteInfo({ note, onClose, onDelete }) {
         <div className="fixed inset-0 backdrop-blur-lg z-50 flex items-center justify-center">
           <div
             ref={menuRef}
-            className="bg-white text-black rounded-lg shadow-inner w-[90vw] md:w-[60vw] max-h-[80vh] flex flex-col overflow-hidden"
+            className="bg-white text-black rounded-lg shadow-inner w-[60vw] md:w-[30vw] max-h-[80vh] flex flex-col overflow-hidden"
           >
             {/* Scrollable content */}
             <div className="flex-1 overflow-y-auto p-4">

@@ -118,7 +118,7 @@ export default function NotesFeed() {
                     className="px-4 py-2 bg-red-400 hover:bg-red-500 rounded-lg shadow-md cursor-pointer"
                     onClick={() => setOpenModal(false)}
                   >
-                    Close
+                    Cancel
                   </button>
                 </div>
               </div>

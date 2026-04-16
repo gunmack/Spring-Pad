@@ -46,11 +46,11 @@
   margin-bottom: 15px;
 }
 
-.notes-content {
+/* .notes-content {
   font-weight: normal;
-  color: #6b7280; /* gray-600 */
+  color: #6b7280; 
   font-size: small;
-}
+} */
 
 /* Optional, different gutter size on mobile */
 @media (max-width: 800px) {

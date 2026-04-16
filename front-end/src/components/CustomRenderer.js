@@ -64,7 +64,7 @@ export function RenderEditorJS({ note, charLimit = 200, blockLimit = 3 }) {
             return (
               <p
                 key={key}
-                className="text-xs md:text-base text-gray-800"
+                className=" text-xs md:text-base text-black"
                 dangerouslySetInnerHTML={{
                   __html:
                     text.length > charLimit
@@ -95,7 +95,7 @@ export function RenderEditorJS({ note, charLimit = 200, blockLimit = 3 }) {
             return (
               <Tag
                 key={key}
-                className={`font-bold text-black ${titleSizes[TitleTag] || "text-base"} ${block.data.alignText || "Text-Align-Left"}`}
+                className={` font-bold text-black ${titleSizes[TitleTag] || "text-base"} ${block.data.alignText || "Text-Align-Left"}`}
                 style={{ color: block.data.color || "inherit" }}
                 dangerouslySetInnerHTML={{
                   __html:
