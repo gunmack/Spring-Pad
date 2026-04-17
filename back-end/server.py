@@ -6,6 +6,7 @@ import database
 logging.basicConfig(level=logging.DEBUG)
 database.setup()
 
+
 app = FastAPI(
     lifespan=database.lifespan,
     title="stevens sex dungeon",
